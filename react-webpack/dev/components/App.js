@@ -1,4 +1,12 @@
 import React, { Component } from "react";
+import ReactDOM from 'react-dom';
+
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+
 
 const styles={
     div: {
@@ -12,12 +20,28 @@ const styles={
 
 }
 
+class Board extends React.Component {
+    renderSquare(i) {
+      return <Square value={i} />;
+    }
+  }
+
+class Square extends React.Component{
+    render(){
+        return(
+            <button className='square'
+            onClick={console.log('Click')}
+            >{this.props.value}</button>
+        )
+    }
+}
+
+
+
 class App extends Component {
     render() {
         return (
-            <div style={styles.div}>
-                <h1 style={styles.h1}>Hello World!</h1> 
-            </div>
+<Board></Board>
         );
     }
 }
