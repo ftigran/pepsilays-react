@@ -11,6 +11,7 @@ import autoprefixer from "autoprefixer";
 import Rules from './Rules'
 import Top from './Top'
 import Priz from './Priz'
+import Random from './Random'
 
 import './App.scss'
 import { Button } from "@material-ui/core";
@@ -105,8 +106,8 @@ class App extends Component {
                     </Grid>
                     <Grid item xs={12}>
                     <Box className={'random'}>
-                                random
-                            </Box>
+                        <Random/>
+                    </Box>
                     </Grid>
                     <Grid item xs={12}>
                     <Box className={'winners'}>
