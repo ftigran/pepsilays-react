@@ -7,33 +7,23 @@
 body{
         margin: 0;
         background-color: #FFDD00;
-}
-
-.rules{
-
-    margin:auto;
-    max-width: 270px;
-    text-transform: uppercase;
-    font-style: normal;
-div:nth-child(2n){
-    margin-left:20px
-}
-    span{
-        font-family: "Montserrat";
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 26px;
-        color: #FFFFFF;
-
     }
-    p{
-        font-family: "Gotham Pro";
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 17px;
-    color: #FFFFFF;
-        
-    }
+
+
+ 
+
+h3{
+    font-family: 'Gotham Pro';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 23px;
+/* identical to box height */
+
+text-align: center;
+text-transform: uppercase;
+
+color: #FFDD00;
 }
 
 /*{font-family: Roboto;

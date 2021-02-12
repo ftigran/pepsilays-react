@@ -1,0 +1,35 @@
+.rules{
+    background: url("../img/sCircles.svg") no-repeat;    
+    max-width: 705px;
+    max-height: 705px;
+        //minWidth: '488px',
+    min-height: 488px;
+        //height: '100%',
+    width: 100%
+    &List{
+        background-size:contain;
+        max-width: 270px;
+        position: relative;
+        margin-right: 40px;
+        margin:auto;
+        max-width: 270px;
+        text-transform: uppercase;
+        font-style: normal;
+    }
+    span{
+        font-family: "Montserrat";
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 26px;
+        color: #FFFFFF;
+
+    }
+    p{
+        font-family: "Gotham Pro";
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 17px;
+    color: #FFFFFF;
+        
+    }
+}

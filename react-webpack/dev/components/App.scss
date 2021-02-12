@@ -1,0 +1,49 @@
+.wrap{
+
+    .top{
+        // background-image: url('/dev/img/bg1.png');
+        // background-size: contain;
+        // background-repeat: no-repeat;
+        // min-height: 800px;
+        
+        width: 100%;
+
+        .bg{
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+
+
+// .topBg{
+//     position: absolute;
+//     //min-width: 100%;
+//     max-width: 1920px;
+//     min-height: 600px;
+//     max-height: 1000px;
+//     background-size: contain;
+//     z-index: -1;
+//     &__panel{
+//         bottom: 0px;
+//     }
+//     &__Circle{
+//     }
+// }
+button.buttonVideo{
+
+    position: relative;
+    border-radius: 50%;
+
+:hover{
+    transform: scale(1.15);
+}
+
+img{
+    transition: all 0.2s ease-in;
+}
+}

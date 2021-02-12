@@ -1,46 +1,74 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
-  entry: "./dev/index.js",
-  output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "index.[hash].js"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
-      },
-      {
-        test: /\.pug$/,
-        loader: 'pug-loader',
-        options: {
-            pretty:true
-        }
-      },
-     {
-         test:/\.(s*)css$/,
-         use: ['style-loader', 'css-loader', 'sass-loader'],
+const path = require('path')
+const {
+    merge
+} = require('webpack-merge')
+const pug = require('./webpack/pug')
+const scss = require('./webpack/scss')
+const images = require('./webpack/images')
+const fonts = require('./webpack/fonts')
+const devServer = require('./webpack/devserver')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
+const autoprefixer = require('autoprefixer')
+const webpack = require('webpack')
 
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+const PATHS = {
+    source: path.join(__dirname, 'dev'),
+    build: path.join(__dirname, 'dist')
+}
+
+const common = merge([{
+        entry: {
+            'index': PATHS.source + '/index.js',
+        },
+        output: {
+            path: PATHS.build,
+            filename: 'js/[name].js'
+        },
+        optimization: {
+            minimizer: [
+                new OptimizeCssAssetsWebpackPlugin({})
+            ]
+        },
+        module: {
+          rules: [
+            {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: ["babel-loader"]
+            },
+          ]
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                filename: 'index.html',
+                chunks: ['index', 'common'],
+                template: PATHS.source + '/index.pug'
+            }),
+
+            new MiniCssExtractPlugin({
+                filename: '[name].css',
+                // chunks: ['index', 'common', 'form-elements']
+            }),
+
         ]
-        }
-    ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./dev/index.pug",
-      filename: 'index.html',
-      inject: true
-    }),
-    
-  ]
-};
+    },
+    pug(),
+    scss(),
+    images(),
+    fonts()
+])
+
+module.exports = function (env) {
+    if (env === 'production') {
+        return common
+    }
+    if (env === 'development') {
+        return merge([
+            common,
+            devServer()
+        ])
+    }
+}

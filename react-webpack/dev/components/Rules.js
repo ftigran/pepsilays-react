@@ -5,8 +5,10 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Grid from '@material-ui/core/Grid';
+import { Container } from "@material-ui/core";
 
-const styles = {
+import './Rules.scss'
+const s4tyles = {
     h1:{
         fontFamily: 'Montserrat',
         fontStyle: "normal",
@@ -16,17 +18,26 @@ const styles = {
         textAlign: 'center',
         textTransform: 'uppercase',
         color: '#10417B',
-        margin: 'auto'
+        margin: '60px auto'
     },
     container:{
         background: 'url(../dev/img/sCircles.svg) no-repeat',
+        
         maxWidth: '705px',
         maxHeight:'705px',
+        //minWidth: '488px',
+        minHeight: '488px',
+
+        //height: '100%',
+        width: '100%',
+        padding:  '120px 200px'
+
     },
     list:{
+        backgroundSize:'contain',
         maxWidth: '270px',
-        //margin: '150px auto',
-
+        position: 'relative',
+        marginRight: "40px"
     },
     numbers:{
         borderRadius:'0px',
@@ -43,19 +54,22 @@ const styles = {
         "textDecorationLine": "underline",
         "textTransform": "uppercase",
         "color": "#FFFFFF", 
+        position: 'absolute',
+        bottom: '-20px',
       }
 }
 
 function Rules(){
     return(
         <div>
-            <h1 style={styles.h1}>Правила</h1>
-                
-                <Grid direction={"column"} alignItems={'center'} container style={styles.container}>
-                    <List className={'rules'} style={styles.list}>
+            <h1 >Правила</h1>
+            
+                <Grid grow={1} direction={"column-reverse"} alignItems={'center'} justify='center' container className={'rules'}>
+                    <Grid item grow={1} xs={12}>
+                    <List  className={'rulesList'}>
                         <ListItem>
                             <ListItemAvatar >
-                                <img alt="1" src="../dev/img/numb1.svg" style={styles.numbers}/>
+                                <img alt="1" src="../dev/img/numb1.svg"/>
                             </ListItemAvatar>                            
                             <ListItemText
                             primary='Купи'
@@ -64,7 +78,7 @@ function Rules(){
                         </ListItem>
                         <ListItem>
                             <ListItemAvatar >
-                                <img alt="2" src="../dev/img/numb2.svg" style={styles.numbers}/>
+                                <img alt="2" src="../dev/img/numb2.svg"/>
                             </ListItemAvatar> 
                             <ListItemText
                             primary='Регистрируй чек на сайте'
@@ -73,17 +87,17 @@ function Rules(){
                         </ListItem>
                         <ListItem>
                             <ListItemAvatar >
-                                <img alt="3" src="../dev/img/numb3.svg" style={styles.numbers}/>
+                                <img alt="3" src="../dev/img/numb3.svg"/>
                             </ListItemAvatar> 
                             <ListItemText
                             primary='выигрывай призы    '
                             secondary='каждую неделю'
                             />
                         </ListItem>
+                        <a href='empty'>Полные правила акции</a>
                     </List>
-
-                    <a style={styles.link} href='empty'>Полные правила акции</a>
-
+                    </Grid>
+                    
                 </Grid>
         </div>
     )

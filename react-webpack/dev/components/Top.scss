@@ -1,0 +1,43 @@
+.promo{
+    max-width: 1920px;
+    .circle{
+        padding-top: 75px;
+        min-height: 600px;
+        margin-left: -50px;
+        margin-right: -50px;
+        margin-bottom: 15px;
+        padding-bottom: 100px;
+        //background: url('../img/mainCirc.svg') no-repeat top center;
+        background-size: contain;
+    }
+    .panel{
+
+    }
+}
+.topPromo{
+        max-width: 1100px;
+        margin-right: 30px;
+        width: 90%;
+    }
+    .topGrid{
+        //padding: 70px 40px 0;
+        //margin-bottom: 150px;
+        margin: 30px;
+        position: absolute;
+        bottom: 25%;
+    }
+.topText{
+    margin-top: -19px;
+margin-bottom: 45px;
+    font-family: 'Gotham Pro';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 23px;
+
+text-align: center;
+text-transform: uppercase;
+
+color: #FFDD00;
+}
+
