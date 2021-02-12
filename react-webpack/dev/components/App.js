@@ -84,7 +84,7 @@ class App extends Component {
                     <Grid item xs={12}>
                             <Box className={'top'}>
                                 <Box className={'bg'}>
-                                <img className={'topBg'} src='../dev/img/bg1.png'/> 
+                                    <img className={'topBg'} src='../dev/img/bg1.png'/> 
                                 </Box>
                                 <Top/>
                                                         
@@ -92,23 +92,23 @@ class App extends Component {
                             
                             </Box>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid item xs={12}  >
                         <Box className={'rules'}>  
                             <Rules/>
                         </Box>
                     </Grid>
                     <Grid item xs={12}>
-                    <Box className={'rules'}>
+                    <Box className={'priz'}>
                                 priz
                             </Box>
                     </Grid>
                     <Grid item xs={12}>
-                    <Box className={'rules'}>
+                    <Box className={'random'}>
                                 random
                             </Box>
                     </Grid>
                     <Grid item xs={12}>
-                    <Box className={'rules'}>
+                    <Box className={'winners'}>
                                 winn
                             </Box>
                     </Grid>
