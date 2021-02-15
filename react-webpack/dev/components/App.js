@@ -21,14 +21,11 @@ class App extends Component {
     render() {
         return (
             <Grid container direction={'column'} justify={'flex-start'} alignItems={'stretch'} className={'wrap'}>
-                <Grid item xs={12}>
-                    <Box className={'top'}>
-                        <Box className={'bg'}>
-                            <img className={'topBg'} src='../dev/img/bg1.png'/> 
-                        </Box>
+                    <Grid item xs={12}>
                         <Top/>
-                    </Box>
-                </Grid>
+                    </Grid>
+                
+                
                 <Grid item xs={12} className={'blockContainer'}>
                     <Rules/>
                     <Priz/>

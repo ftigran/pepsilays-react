@@ -4,6 +4,23 @@
     }
     &Container{
         padding: 170px 0;
+        a{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+    
+            text-align: center;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+    
+            color: #FFFFFF;
+            //position: absolute;
+            //bottom: -30px;
+            //margin: auto;
+        }
     }
     &Bg{
         ///background: url("../img/sCircles.svg") no-repeat;  
@@ -44,23 +61,7 @@
             color: #FFFFFF;
             
         }
-        a{
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            /* identical to box height, or 150% */
-    
-            text-align: center;
-            text-decoration-line: underline;
-            text-transform: uppercase;
-    
-            color: #FFFFFF;
-            //position: absolute;
-            //bottom: -30px;
-            //margin: auto;
-        }
+
     }
 
 }
