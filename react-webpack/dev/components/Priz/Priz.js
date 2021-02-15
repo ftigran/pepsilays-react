@@ -11,21 +11,19 @@ const imgs=[
 
 function Priz(){
     return(
-        <Box>
+        <Box className={'priz'}>
             <h2 className='title'>Призы</h2>
-            <Grid direction={"row"} container>    
-                <Grid container alignItems={'center'} spacing={2} justify={'space-between'} >
+            <Grid container alignItems={'center'} justify={'center'} className={'prizContainer'}>
                     <Grid item xs={12} sm={6} lg={3}>
-                        <Box><img src={imgs[0]} className={'prizImg'}/></Box>
+                        <img src={imgs[0]} className={'prizImg'}/>
                     </Grid>
                     <Grid item xs={12} sm={6} lg={3}>
-                        <Box><img src={imgs[1]} className={'prizImg'}/></Box>
+                        <img src={imgs[1]} className={'prizImg'}/>
                     </Grid>
                     <Grid item xs={12} lg={6}>
-                        <Box><img src={imgs[2]} className={'prizImg'}/></Box>
+                        <img src={imgs[2]} className={'prizImg'}/>
                     </Grid>
                 </Grid>
-            </Grid>
         </Box>
     )
 }

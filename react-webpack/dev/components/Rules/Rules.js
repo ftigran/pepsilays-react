@@ -8,56 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import { Box, Container } from "@material-ui/core";
 
 import './Rules.scss'
-const s4tyles = {
-    h1:{
-        fontFamily: 'Montserrat',
-        fontStyle: "normal",
-        fontWeight: '900',
-        fontSize: '42px',
-        lineHeight: '51px',
-        textAlign: 'center',
-        textTransform: 'uppercase',
-        color: '#10417B',
-        margin: '60px auto'
-    },
-    container:{
-        background: 'url(../dev/img/sCircles.svg) no-repeat',
-        
-        maxWidth: '705px',
-        maxHeight:'705px',
-        //minWidth: '488px',
-        minHeight: '488px',
-
-        //height: '100%',
-        width: '100%',
-        padding:  '120px 200px'
-
-    },
-    list:{
-        backgroundSize:'contain',
-        maxWidth: '270px',
-        position: 'relative',
-        marginRight: "40px"
-    },
-    numbers:{
-        borderRadius:'0px',
-        width:'55px',
-        height:'68px',
-    },
-    link: {
-        "fontFamily": "Roboto",
-        "fontStyle": "normal",
-        "fontWeight": "500",
-        "fontSize": "16px",
-        "lineHeight": "24px",
-        "textAlign": "center",
-        "textDecorationLine": "underline",
-        "textTransform": "uppercase",
-        "color": "#FFFFFF", 
-        position: 'absolute',
-        bottom: '-20px',
-      }
-}
 
 function Rules(){
     return(

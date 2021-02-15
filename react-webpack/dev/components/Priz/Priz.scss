@@ -1,0 +1,13 @@
+.priz{
+    &Img{
+        width:100%;
+        box-sizing: border-box;
+    }
+    .prizContainer{
+        max-width: 1215px;
+        margin: auto;
+        div{
+            padding: 10px
+        }
+    }
+}

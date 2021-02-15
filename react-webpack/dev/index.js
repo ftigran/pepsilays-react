@@ -5,14 +5,14 @@ import App from "./components/App.js";
 
 import './index.scss';
 
-ReactDOM.render(<Winners />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 
 
-import Rules from './components/Rules'//++
-import Top from './components/Top' //++
-import Priz from './components/Priz' //++
-import Random from './components/Random' //++
-import Winners from './components/Winners' //++
+import Rules from './components/Rules/Rules'//++
+import Top from './components/Top/Top' //++
+import Priz from './components/Priz/Priz' //++
+import Random from './components/Random/Random' //++
+import Winners from './components/Winners/Winners' //++
 
  

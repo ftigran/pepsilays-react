@@ -1,0 +1,43 @@
+
+.winners{
+    
+
+    .winnersForm{
+        margin: auto;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 5px;
+        max-width: 386px;
+        box-shadow: none;
+        height: 60px;
+
+        display: flex;
+        flex-direction: row;
+            }
+    .winnersInput{
+        padding: 0 20px;
+        margin: 0;
+        height: 100%;
+        flex-grow: 1;
+        input{
+            font-family: 'Gotham Pro';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 17px;
+            color: #055BA4;
+            text-transform: uppercase;
+        }
+        ::placeholder{
+            opacity: 1;
+        }
+    }
+    .winnersButton{
+        float: right;
+        width: 44px;
+        height: 44px;
+        background: #055BA4;
+        border-radius: 5px;
+        color: #fff;
+        margin: 8px 15px;
+    }
+}

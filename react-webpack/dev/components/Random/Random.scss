@@ -1,0 +1,23 @@
+
+.random{
+
+    background:url('../../img/bg3.svg') no-repeat;
+    background-size:cover;
+    padding: 50px 0;
+    position: relative;
+    width:100%;
+
+    .randomScreen{
+        min-height:800px;
+        max-width: 1100px;
+        background: url('../../img/video.png') no-repeat;
+        background-position: 50px;
+        background-size:100%
+    }
+
+    &SubScreen{
+    max-height: 800px;
+    max-width:470px;
+    margin: 0 auto;
+    padding: 15%;
+}}
