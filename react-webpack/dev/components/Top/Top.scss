@@ -34,8 +34,13 @@
 
     color: #FFDD00;
 }
-.topButton{
-    background-color:'#FFDD00';
+button.topButton{
+    background-color:#FFDD00;
+    color: #004088;
+    &:hover{
+        background-color:#004088;
+        color: #FFDD00;
+    }
 }
 
 @media (max-width: 1850px) {

@@ -5,14 +5,20 @@
     
     &Container{
 
+        background: url('../../img/sCircles.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
         font-size: 10px;
+        max-width: 705px;
+        min-height: 705px;
 
-        padding: 170px 0;
+        margin: 60px auto 0;
+
         a{
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
-            font-size: 1.6em;
+            font-size: 16px;
             line-height: 1.5em;
             /* identical to box height, or 150% */
     
@@ -26,32 +32,29 @@
             //margin: auto;
         }
         .rulesNumb{
-            margin-right: 2em;
             max-width: 60px;
         }
     }
-
-    &Bg{
-        ///background: url("../img/sCircles.svg") no-repeat;  
-        position: absolute;  
-        max-width: 705px;
-        max-height: 705px;
-            //minWidth: '488px',
-        min-height: 488px;
-            //height: '100%',
-        //width: 100%;
-        margin: auto;
-    }
-    
     &List{
-        background-size:contain;
-        max-width: 27em;
-        position: relative;
-        margin-right: 40px;
-        margin:auto;
+        
+
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 17px;
+        align-items: center;
         max-width: 320px;
+        position: relative;
+
+        padding-top: 20px;
+        padding-bottom: 3em;
+
         text-transform: uppercase;
         font-style: normal;
+
+        img:first-child{
+            margin-left: 10px;
+        }
         span{
             font-family: "Montserrat";
             font-weight: 900;
@@ -75,28 +78,23 @@
 
 @media (max-width: 545px) {
     .rulesContainer{
+        margin-top: 35px;
         font-size: 8px;
-        .rulesNumb{
-            max-width: 30px;
-        }
+        min-height: 545px;
+
     }
 
 }
-@media (max-width: 450px) {
-
-    
+@media (max-width: 488px) {
     .rulesContainer{
-        font-size: 6.5px;
-        .rulesList{
-            margin-left: 25px;
-            max-width: 250px;
-            li{
-                padding: 2px;
-            }
-        }
-        .rulesNumb{
-            max-width: 20px;
-        }
-    }
+        font-size: 7.7px;
+        background-size: 488px;
+        min-height: 505px;
 
+    }
+    .rulesList{
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
 }

@@ -5,7 +5,7 @@ import './Random.scss'
 
 function Priz(){
     return(
-        <Container item className={"random"}>
+        <Container className={"random"}>
             <img src='../dev/img/bg2.svg'className={'randomBGtop'}/>
             <Container className={'randomScreen'}>
                 <img src='../dev/img/video-1.png'className={'randomVideo'}/>
