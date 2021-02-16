@@ -12,7 +12,7 @@ function Rules(){
             <img className={'topPromoM'} src="../dev/img/promo2.png"></img>
 
             <h3 className='topText' >Попробуй жанры на вкус</h3>
-            <Button className='topButton' variant="contained" style={{backgroundColor:'#FFDD00'}}>
+            <Button className='topButton' variant="contained" className={'topButton'}>
                 Зарегистрировать чек
             </Button>
         </Grid>

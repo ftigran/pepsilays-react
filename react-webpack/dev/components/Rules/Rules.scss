@@ -2,14 +2,18 @@
     &Block{
         margin-top: 70px;   
     }
+    
     &Container{
+
+        font-size: 10px;
+
         padding: 170px 0;
         a{
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 1.6em;
+            line-height: 1.5em;
             /* identical to box height, or 150% */
     
             text-align: center;
@@ -21,7 +25,12 @@
             //bottom: -30px;
             //margin: auto;
         }
+        .rulesNumb{
+            margin-right: 2em;
+            max-width: 60px;
+        }
     }
+
     &Bg{
         ///background: url("../img/sCircles.svg") no-repeat;  
         position: absolute;  
@@ -33,12 +42,10 @@
         //width: 100%;
         margin: auto;
     }
-    &Numb{
-        margin-right: 20px;
-    }
+    
     &List{
         background-size:contain;
-        max-width: 270px;
+        max-width: 27em;
         position: relative;
         margin-right: 40px;
         margin:auto;
@@ -48,20 +55,48 @@
         span{
             font-family: "Montserrat";
             font-weight: 900;
-            font-size: 24px;
-            line-height: 26px;
+            font-size: 2.4em;
+            line-height: 1.08em;
             color: #FFFFFF;
     
         }
         p{
             font-family: "Gotham Pro";
             font-weight: bold;
-            font-size: 18px;
-            line-height: 17px;
+            font-size: 1.8em;
+            line-height: 0.94em;
             color: #FFFFFF;
             
         }
 
+    }
+
+}
+
+@media (max-width: 545px) {
+    .rulesContainer{
+        font-size: 8px;
+        .rulesNumb{
+            max-width: 30px;
+        }
+    }
+
+}
+@media (max-width: 450px) {
+
+    
+    .rulesContainer{
+        font-size: 6.5px;
+        .rulesList{
+            margin-left: 25px;
+            max-width: 250px;
+            li{
+                padding: 2px;
+            }
+        }
+        .rulesNumb{
+            max-width: 20px;
+        }
     }
 
 }

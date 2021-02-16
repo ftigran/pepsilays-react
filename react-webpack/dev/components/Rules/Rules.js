@@ -20,27 +20,21 @@ function Rules(){
                     <Grid item>
                         <List  className={'rulesList'}>
                             <ListItem>
-                                <ListItemAvatar className={'rulesNumb'} >
-                                    <img alt="1" src="../dev/img/numb1.svg"/>
-                                </ListItemAvatar>                            
+                                <img alt="3" className={'rulesNumb'} src="../dev/img/numb1.svg"/>                     
                                 <ListItemText
                                 primary='Купи'
                                 secondary="2 любых продукта Lay's (150, 225 г.) или Pepsi (1 или 2 л.)"
                                 />
                             </ListItem>
                             <ListItem>
-                                <ListItemAvatar className={'rulesNumb'}>
-                                    <img alt="2" src="../dev/img/numb2.svg"/>
-                                </ListItemAvatar> 
+                                <img alt="3" className={'rulesNumb'} src="../dev/img/numb2.svg"/>
                                 <ListItemText
                                 primary='Регистрируй чек на сайте'
                                 secondary='выбери жанр, участвуй в розыгрыше призов'
                                 />
                             </ListItem>
                             <ListItem>
-                                <ListItemAvatar className={'rulesNumb'}>
-                                    <img alt="3" src="../dev/img/numb3.svg"/>
-                                </ListItemAvatar> 
+                                <img alt="3" className={'rulesNumb'} src="../dev/img/numb3.svg"/>
                                 <ListItemText
                                 primary='выигрывай призы    '
                                 secondary='каждую неделю'

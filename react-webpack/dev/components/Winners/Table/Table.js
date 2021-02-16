@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+//import Pagination from '@material-ui/core/Pagination';
 
 import './Table.scss'
 
@@ -99,6 +100,7 @@ export default function StickyHeadTable() {
           </TableBody>
         </Table>
       </TableContainer>
+      
       <TablePagination
       className={'tablePagination'}
         rowsPerPageOptions={[]}
