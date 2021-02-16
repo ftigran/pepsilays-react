@@ -10,16 +10,6 @@
 
     }
 }
-div .topGrid{
-    //padding: 70px 40px 0;
-    //margin-bottom: 150px;
-    //position: absolute;
-    //bottom: 25%;
-    //background: url('../img/bg1.png') no-repeat;
-    //background-size: contain;
-    //max-width: 1920px;
-}
-
 body{
     margin:0;
 }
@@ -37,32 +27,4 @@ body{
         content: '';
     }
 
-}
-
-// .topBg{
-//     position: absolute;
-//     //min-width: 100%;
-//     max-width: 1920px;
-//     min-height: 600px;
-//     max-height: 1000px;
-//     background-size: contain;
-//     z-index: -1;
-//     &__panel{
-//         bottom: 0px;
-//     }
-//     &__Circle{
-//     }
-// }
-button.buttonVideo{
-
-    position: relative;
-    border-radius: 50%;
-
-:hover{
-    transform: scale(1.15);
-}
-
-img{
-    transition: all 0.2s ease-in;
-}
 }

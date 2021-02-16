@@ -5,7 +5,7 @@ import App from "./components/App.js";
 
 import './index.scss';
 
-ReactDOM.render(<Priz />, document.getElementById("root"));
+ReactDOM.render(<Random />, document.getElementById("root"));
 
 
 
