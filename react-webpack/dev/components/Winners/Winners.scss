@@ -1,5 +1,6 @@
 
 .winners{
+    padding: 0 8px;
     
 
     .winnersForm{
@@ -9,13 +10,11 @@
         max-width: 386px;
         box-shadow: none;
         height: 60px;
-
         display: flex;
         flex-direction: row;
             }
     .winnersInput{
         padding: 0 20px;
-        margin: 0;
         height: 100%;
         flex-grow: 1;
         input{

@@ -8,7 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-//import Pagination from '@material-ui/core/Pagination';
+import Pagination from '@material-ui/lab/Pagination';
 
 import './Table.scss'
 
@@ -37,6 +37,7 @@ function createData(date, email, name, priz) {
 
 const rows = [
     createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
+    createData('25.02.21', 'r.bol***@ya.ru', 'Evgeny', 'Еженедельный'),
     createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
     createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
     createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
@@ -50,20 +51,17 @@ const rows = [
     createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
     createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
     createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
+    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
+
 ];
 
 
 export default function StickyHeadTable() {
-  const [page, setPage] = React.useState(0);
+  const [page, setPage] = React.useState(1);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
   };
 
   return (
@@ -83,7 +81,7 @@ export default function StickyHeadTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, id) => {
+            {rows.slice((page-1) * rowsPerPage, (page-1) * rowsPerPage + rowsPerPage).map((row, id) => {
               return (
                 <TableRow hover tabIndex={-1} key={id}>
                   {columns.map((column) => {
@@ -101,15 +99,11 @@ export default function StickyHeadTable() {
         </Table>
       </TableContainer>
       
-      <TablePagination
+      <Pagination
       className={'tablePagination'}
-        rowsPerPageOptions={[]}
-        component="div"
-        count={rows.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onChangePage={handleChangePage}
-        onChangeRowsPerPage={handleChangeRowsPerPage}
+      count={Math.ceil(rows.length/5)} 
+      page={page} 
+      onChange={handleChangePage}  
       />
     </Paper>
   );

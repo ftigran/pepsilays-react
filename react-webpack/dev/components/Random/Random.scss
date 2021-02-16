@@ -1,5 +1,6 @@
 
 .random{
+    max-width: 100%;
     &Video{
         display: none;
     }
@@ -46,6 +47,10 @@
         color: white;
         margin: 3px;
     }
+}
+
+div.random{
+    max-width: 100%;
 }
 
 @media(max-width: 1050px){
