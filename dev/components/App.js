@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
+import { Router, Route, Switch } from "react-router";
 
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -17,22 +18,14 @@ import './App.scss'
 import { Button } from "@material-ui/core";
 import Winners from "./Winners/Winners";
 
+
 class App extends Component {
     render() {
         return (
-            <Grid container direction={'column'} justify={'flex-start'} alignItems={'stretch'} className={'wrap'}>
-                    <Grid item xs={12}>
-                        <Top/>
-                    </Grid>
-                
-                
-                <Grid item xs={12} className={'blockContainer'}>
-                    <Rules/>
-                    <Priz/>
-                    <Random/>
-                    <Winners/>
-                </Grid>
-            </Grid>
+            <ul>
+                <li><link></link></li>
+
+            </ul>
         );
     }
 }
