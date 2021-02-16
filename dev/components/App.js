@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch } from "react-router";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -22,32 +27,48 @@ import Winners from "./Winners/Winners";
 class App extends Component {
     render() {
         return (
-            <ul>
-                <li><link></link></li>
+            <Router>
+                <Grid container component={'header'}>
+                    <img src="./dev/img/logo.svg"/>
+                    <Grid container component={'nav'}>
+                        <ul>
+                            <li>
+                                <Link to="/">Главная</Link>
+                            </li>
+                            <li>
+                                <Link to="empty">Правила</Link>
+                            </li>
+                            <li>
+                                <Link to="empty">Призы</Link>
+                            </li>
+                            <li>
+                                <Link to="empty">Победители</Link>
+                            </li>
+                            <li>
+                                <Link to="/faq">faq</Link>
+                            </li>
+                            <li>
+                                <Link to="empty">Регистрация</Link>
+                            </li>
+                            <li>
+                                <Link to="/empty">Войти</Link>
+                            </li>
+                        </ul>
+                    </Grid>
+                </Grid>
 
-            </ul>
+                <hr />
+
+                <Switch>
+                    <Route exact path="/faq">
+                    <Top/>
+                    </Route>
+                </Switch>
+
+            </Router>
+            
         );
     }
 }
 
-export default App; 
-/* <Grid item xs={12} >
-                        <Box className={'rules'}>  
-                            <Rules/>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} className={'blockContainer'}>
-                    <Box className={'priz'}>
-                            <Priz/>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12} className={'blockContainer'}>
-                    <Box className={'random'}>
-                        <Random/>
-                    </Box>
-                    </Grid>
-                    <Grid item xs={12} className={'blockContainer'}>
-                    <Box className={'winners'}>
-                        <Winners/>        
-                    </Box>
-                    </Grid> */
+export default App;

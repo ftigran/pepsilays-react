@@ -16,7 +16,7 @@ function Rules(){
 
             <Grid direction={"column"} justify='center' container className={'rulesContainer'} alignItems={'center'}>
                     <Grid item className={'rulesList'}>
-                        <img alt="1" className={'rulesNumb'} src="../dev/img/numb1.svg"/>                     
+                        <img alt="1" className={'rulesNumb'} src="../dev/img/numb1.svg"/>          
                                 <ListItemText
                                 primary='Купи'
                                 secondary="2 любых продукта Lay's (150, 225 г.) или Pepsi (1 или 2 л.)"

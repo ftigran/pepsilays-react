@@ -1,7 +1,6 @@
 {
   "name": "react-webpack",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env development",
@@ -41,6 +40,8 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-router": "^5.2.0"
-  }
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "description": ""
 }
