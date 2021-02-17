@@ -1,0 +1,114 @@
+header.header{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    left: 0;
+    justify-content: space-between;
+    nav{
+        width: auto;
+    }
+    img{
+        margin-top: 20px;
+        max-width: 141.5px;
+        max-height: 57.5px;
+        border-radius: 2px;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    li{
+        margin-left: 30px;
+        min-height: 32px;
+        line-height: 32px;
+        &:hover{
+            text-shadow: violet;
+        }
+    }
+    a{
+        font-family: "Gotham Pro";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 17px;
+        /* identical to box height */
+        height: 100%;
+        text-align: right;
+        text-transform: uppercase;
+
+        text-decoration: none;
+
+        color: #FFFFFF;
+    }
+    .headerReg, .headerEnter{
+        padding: 0 15px;
+        border-radius: 5px;
+    }
+    .headerReg{
+        background-color: #fff;
+        a{
+            color: #004088;
+        }
+    }
+    .headerEnter{
+        border: 2px solid #fff
+    }
+    .headerIcoTablet, .headerMenu{
+        display: none;
+    }
+}
+
+@media(max-width: 1150px){
+    .header{
+    .headerReg, .headerEnter{
+        display: none;
+    }
+    li.headerIcoTablet {
+        display: block;
+        button{
+            padding: 0;
+            min-width: 0px;
+            border-radius: 50%;
+        }
+        svg{
+            width: 32px;
+            height: 32px;
+            color: #fff;
+        }
+    }
+    }
+}
+
+@media(max-width: 880px){
+    header.header{
+        img{
+            margin-top: 12px;
+        }
+    li.headerIcoTablet, nav {
+        display: none;
+    }
+    .headerMenu{
+        display: block;
+        button{
+        }
+        span{
+        }
+        svg{
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            path{
+                
+            }
+        }
+    }
+}
+}
