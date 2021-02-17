@@ -9,6 +9,7 @@ import {
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { Link as LinkR, animateScroll as scroll } from "react-scroll";
 
 import './List.scss'
 
@@ -17,36 +18,45 @@ export default function List() {
         <Grid container component={'nav'} className={'headerList'} justify={'flex-end'}>
             <ul>
                 <li>
-                    <Link to="/">Главная</Link>
+                    <LinkR to='main' smooth={true} duration={500}>
+                        <Link to="/">Главная</Link>
+                    </LinkR>
                 </li>
                 <li>
-                    <Link to="empty">Правила</Link>
+                    <LinkR to='rules' smooth={true} duration={500}>
+                        <Link to="/#rules">Правила</Link>
+                    </LinkR>
                 </li>
                 <li>
-                    <Link to="empty">Призы</Link>
+                    <LinkR to='priz' smooth={true} duration={500}>
+                        <Link to="/#priz">Призы</Link>
+                    </LinkR>
                 </li>
                 <li>
-                    <Link to="empty">Победители</Link>
+                    <LinkR to='winners' smooth={true} duration={500}>
+                        <Link to="/#winners">Победители</Link>
+                    </LinkR>
                 </li>
                 <li>
-                    <Link to="/faq">faq</Link>
+                    <LinkR to='faq' smooth={true} duration={500}>
+                        <Link to="/faq">faq</Link>
+                    </LinkR>
                 </li>
                 <div className='headerListGap'></div>
                 <li className={'headerListReg'}>
-                    <Link to="empty">
-                        Регистрация
-                    </Link>
+                    <LinkR to='reg' smooth={true} duration={500}>
+                        <Link to="/registration">
+                            Регистрация
+                        </Link>
+                    </LinkR>
                 </li>
                 <li className={'headerListEnter'}>
-                    <Link to="/empty">
-                        Войти
-                    </Link>
+                    <LinkR to='enter' smooth={true} duration={500}>
+                        <Link to="/enter">
+                            Войти
+                        </Link>
+                    </LinkR>    
                 </li>
-                {/* <li className={'headerListIcoTablet'}>
-                    <Button >
-                        <AccountCircleIcon className={'headerListProfile'}/>
-                    </Button>
-                </li> */}
             </ul>
         </Grid>
     )

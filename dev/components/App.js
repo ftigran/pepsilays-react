@@ -41,6 +41,9 @@ class App extends Component {
                         <Route exact path="/">
                             <Main/>
                         </Route>
+                        <Route path="/#">
+                            <Main/>
+                        </Route>
                     </Switch>
     
             </Router>
@@ -50,3 +53,6 @@ class App extends Component {
 
 export default App;
 
+function aa(){
+    alert('qqq')
+}

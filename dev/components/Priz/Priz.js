@@ -13,7 +13,7 @@ const imgs=[
 
 function Priz(){
     return(
-        <Box className={'priz'}>
+        <Box className={'priz'} id={'priz'}>
             <h2 className='title'>Призы</h2>
             <Grid container alignItems={'center'} justify={'center'} className={'prizContainer'} >
                     <Grid item xs={12} lg={3}>

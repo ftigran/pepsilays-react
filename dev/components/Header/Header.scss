@@ -16,8 +16,13 @@ header.header{
         border-radius: 2px;
     }
 }
-
+.PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5{
+    display: none;
+}
 @media(max-width: 1160px){
+    .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5{
+        display: block;
+    }
     header.header{
         img{
             margin-top: 12px;

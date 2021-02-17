@@ -11,7 +11,7 @@ import './Rules.scss'
 
 function Rules(){
     return(
-        <div className="rulesBlock">
+        <div className="rulesBlock" id={'rules'}>
             <h2 className='title'>Правила</h2>
 
             <Grid direction={"column"} justify='center' container className={'rulesContainer'} alignItems={'center'}>

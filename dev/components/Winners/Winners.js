@@ -7,7 +7,7 @@ import './Winners.scss'
 
 function Winners(){
     return(         
-        <Box className={'winners'}>
+        <Box id='winners' className={'winners'}>
             <h2>Победители</h2>
             <Paper component="form" className={'winnersForm'}>
                 <InputBase

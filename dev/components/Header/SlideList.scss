@@ -33,7 +33,7 @@ button.headerMenu{
         flex-grow: 10000;
     }
     nav{
-        height: 100%;
+        height: calc(100% - 76px);
     }
     .sliderListHeader{
         padding: 12px 15px 30px;

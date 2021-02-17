@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 
 function Rules(){
     return(
-        <Grid direction={"column"} container justify={'flex-start'} alignItems='center' className={'topGrid'}>
+        <Grid direction={"column"} container justify={'flex-start'} alignItems='center' className={'topGrid'} id={'main'}>
             <img className={'topPromo'} src="../dev/img/promo.png"></img>
             <img className={'topPromoM'} src="../dev/img/promo2.png"></img>
 

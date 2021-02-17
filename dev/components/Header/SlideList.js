@@ -14,7 +14,7 @@ import List from './List/List'
 import CloseIcon from '@material-ui/icons/Close';
 import './SlideList.scss'
 export default function SwipeableTemporaryDrawer() {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = React.useState(false);
 
   const toggleDrawer = (open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -29,6 +29,7 @@ export default function SwipeableTemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
+      style={{height:'100%'}}
     > 
       <Grid container justify={'space-between'} className={'sliderListHeader'}>
         <img src="./dev/img/logo.svg"/>

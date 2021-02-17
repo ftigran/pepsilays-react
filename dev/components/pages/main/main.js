@@ -9,6 +9,8 @@ import Random from '../../Random/Random'
 import Winners from "../../Winners/Winners";
 import Footer from "../../Footer/Footer";
 
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 export default class Main extends Component {
     render() {
@@ -17,15 +19,12 @@ export default class Main extends Component {
                     <Grid item xs={12}>
                         <Top/>
                     </Grid>
-                
-                
                 <Grid item xs={12} className={'blockContainer'}>
                     <Rules/>
                     <Priz/>
                     <Random/>
                     <Winners/>
                     <Footer/>
-                    
                 </Grid>
             </Grid>
         );
