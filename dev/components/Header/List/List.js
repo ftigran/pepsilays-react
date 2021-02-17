@@ -10,9 +10,11 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
+import './List.scss'
+
 export default function List() {
     return(
-        <Grid container component={'nav'}>
+        <Grid container component={'nav'} className={'headerList'} justify={'flex-end'}>
             <ul>
                 <li>
                     <Link to="/">Главная</Link>
@@ -29,21 +31,22 @@ export default function List() {
                 <li>
                     <Link to="/faq">faq</Link>
                 </li>
-                <li className={'headerReg'}>
+                <div className='headerListGap'></div>
+                <li className={'headerListReg'}>
                     <Link to="empty">
                         Регистрация
                     </Link>
                 </li>
-                <li className={'headerEnter'}>
+                <li className={'headerListEnter'}>
                     <Link to="/empty">
                         Войти
                     </Link>
                 </li>
-                <li className={'headerIcoTablet'}>
+                {/* <li className={'headerListIcoTablet'}>
                     <Button >
-                        <AccountCircleIcon className={'headerProfile'}/>
+                        <AccountCircleIcon className={'headerListProfile'}/>
                     </Button>
-                </li>
+                </li> */}
             </ul>
         </Grid>
     )
