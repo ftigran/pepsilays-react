@@ -7,6 +7,7 @@ import Top from '../../Top/Top'
 import Priz from '../../Priz/Priz'
 import Random from '../../Random/Random'
 import Winners from "../../Winners/Winners";
+import Footer from "../../Footer/Footer";
 
 
 export default class Main extends Component {
@@ -23,6 +24,8 @@ export default class Main extends Component {
                     <Priz/>
                     <Random/>
                     <Winners/>
+                    <Footer/>
+                    
                 </Grid>
             </Grid>
         );
