@@ -17,6 +17,7 @@ import Priz from './Priz/Priz'
 import Random from './Random/Random'
 import Main from './pages/main/main'
 import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 import './App.scss'
 import Winners from "./Winners/Winners";
@@ -45,7 +46,7 @@ class App extends Component {
                             <Main/>
                         </Route>
                     </Switch>
-    
+                <Footer/>
             </Router>
         );
     }
