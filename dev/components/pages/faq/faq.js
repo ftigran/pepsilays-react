@@ -1,16 +1,29 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
-
+import Cleave from 'cleave.js/react';
 
 import Questions from '../../Questions/Questions'
 import Modal from '../../Modal/Modal'
+import TextFields from '../../TextField/TextField'
+
 import {verify} from '../../Modal/SimpleModal/SimpleModal'
 
 export default function FAQ(){
+    
     return(
         <Grid container direction={'row'} justify={'space-between'}>
             <Questions/>
+            {/* <Cleave 
+            options={{
+                phone: true,
+                phoneRegionCode: 'RU'
+                }}/> */}
+                <TextFields type={'email'} placeholder={'e-mail'}/>
+                <TextFields type={'name'} placeholder={'Имя'}/>
+                <TextFields type={'message'} placeholder={'Сообщение'}/>
+
+
             {verify}
             <Grid item xs={4}>
                 <Modal 
@@ -21,7 +34,7 @@ export default function FAQ(){
             <Paper component="form" className={'classes.root'}>
                 <h2>Не нашел ответ на свой вопрос ?</h2>
                 <p>Задай его нам и мы обазательно тебе ответим!</p>
-                <TextField placeholder={'e-mail'} required={true}></TextField>
+                
       <InputBase
         className={'classes.input'}
         placeholder="Search Google Maps"
@@ -48,5 +61,4 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import DirectionsIcon from '@material-ui/icons/Directions';
-import TextField from '@material-ui/core/TextField';
 
