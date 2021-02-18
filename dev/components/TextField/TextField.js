@@ -5,18 +5,22 @@ import TextField from '@material-ui/core/TextField';
 export default function TextFieldTemplate(props){
     let regular;
     let error;
+    let minLen;
     switch(props.type){
         case 'email':
             regular=new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+            minLen=5;
             error='Введите корректный e-mail'
             break;
         case 'name':
             regular=new RegExp(/[а-яА-ЯЁё-і]/g)
             error='Заполните поле'
+            minLen=4;
             break;
         case 'message':
             regular=new RegExp(/[а-яА-ЯЁё-і0-9]/g)
-            error='Запо55лните поле'
+            minLen=20;
+            error='Введите сообщение от 20 символов'
             break;
         default:
             console.log( "Нет таких значений" );
@@ -28,7 +32,7 @@ export default function TextFieldTemplate(props){
         const {target: {value}}= event;
         setErrors('')
         setVal(value);
-        if (!regular.test(value)){
+        if (!regular.test(value)||value.length<minLen){
             setErrors(error)
         }
     }

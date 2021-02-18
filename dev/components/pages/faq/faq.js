@@ -6,6 +6,8 @@ import Cleave from 'cleave.js/react';
 import Questions from '../../Questions/Questions'
 import Modal from '../../Modal/Modal'
 import TextFields from '../../TextField/TextField'
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import {verify} from '../../Modal/SimpleModal/SimpleModal'
 
@@ -22,6 +24,17 @@ export default function FAQ(){
                 <TextFields type={'email'} placeholder={'e-mail'}/>
                 <TextFields type={'name'} placeholder={'Имя'}/>
                 <TextFields type={'message'} placeholder={'Сообщение'}/>
+                
+                <FormControlLabel
+        control={
+          <Checkbox
+            checked
+            name="checkedB"
+            color="primary"
+          />
+        }
+        label="Согласие на обработку персональных данных"
+      />
 
 
             {verify}
