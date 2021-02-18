@@ -1,0 +1,64 @@
+.questions{
+        .questionsAccordeon{
+        background-color: transparent;
+        box-shadow: none;
+        margin: 0 !important;
+        &Title{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+
+            color: #10417B;
+        }
+        &Text{
+            font-family: 'Gotham Pro';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+
+            color: #10417B;
+        }
+
+        &.MuiAccordion-root{
+            &:before{
+                display: none;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                height: 2px;
+                width: 100%;
+                background-color: #10417B;
+                opacity: 0.25;
+            }
+            &.Mui-expanded::after{
+                opacity: 1;
+            }
+        }
+        &Summary{
+        flex-direction: row-reverse;
+        padding: 0;
+        }
+    }
+    
+    .MuiAccordionSummary-expandIcon{
+        border: 1.5px solid #10417B;
+        box-sizing: border-box;
+        color: #10417B;
+        width: 50px;
+        height: 50px;
+        margin: 30px 30px 30px 0;
+        svg{
+            width: 44px;
+            height: 38px;
+        }
+        &.Mui-expanded{
+            background: #10417B;
+            color: #FFDD00;  
+        }
+    }
+}

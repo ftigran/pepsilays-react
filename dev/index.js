@@ -3,9 +3,11 @@ import React, { Component }  from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App.js";
 
+import FAQ from "./components/pages/faq/faq.js";
+
 import './index.scss';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<FAQ />, document.getElementById("root"));
 
 
 import Main from './components/pages/main/main' //++
