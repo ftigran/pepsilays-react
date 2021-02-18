@@ -1,0 +1,31 @@
+.modalWindow{
+    position: relative;
+    
+    .modalWindowClose{
+        color:#fff;
+        position: absolute;
+        right: 13px;
+        top: 13px;
+        svg{
+            width: 31px;
+            height: 31px;
+        }
+    }
+    background: #10417B;
+    padding: 55px 75px 50px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+
+    h2{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+}
