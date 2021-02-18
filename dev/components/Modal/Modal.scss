@@ -1,6 +1,8 @@
 .modalWindow{
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .modalWindowClose{
         color:#fff;
         position: absolute;
@@ -14,7 +16,9 @@
     background: #10417B;
     padding: 55px 75px 50px;
     max-width: 600px;
+    box-sizing: border-box;
     margin: auto;
+
     border-radius: 8px;
 
     h2{
@@ -25,7 +29,7 @@
         line-height: 29px;
         text-align: center;
         text-transform: uppercase;
-
+        margin: 0;
         color: #FFFFFF;
     }
 }

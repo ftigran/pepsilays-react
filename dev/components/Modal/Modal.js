@@ -36,7 +36,7 @@ export default function TransitionsModal(props) {
         }}
       >
         <Fade in={open}>
-          <div className={'modalWindow'}>
+          <div className={'modalWindow'+props.className}>
             <h2 id="transition-modal-title">{props.title}</h2>
                 <IconButton
                 aria-label="Закрыть окно"
@@ -45,8 +45,6 @@ export default function TransitionsModal(props) {
                 >
                     <CloseIcon/>
                 </IconButton>
-
-            <p id="transition-modal-description">react-transition-group animates me.</p>
             {props.children}
           </div>
         </Fade>

@@ -5,14 +5,15 @@ import Grid from '@material-ui/core/Grid';
 
 import Questions from '../../Questions/Questions'
 import Modal from '../../Modal/Modal'
+import {verify} from '../../Modal/SimpleModal/SimpleModal'
 
 export default function FAQ(){
     return(
         <Grid container direction={'row'} justify={'space-between'}>
             <Questions/>
+            {verify}
             <Grid item xs={4}>
                 <Modal 
-                q={'a'}
                 btnText={'Задать вопрос'} 
                 title='Вопрос отправлен'
                 >
