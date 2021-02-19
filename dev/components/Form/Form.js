@@ -11,7 +11,7 @@ import  {question} from '../Modal/SimpleModal/SimpleModal'
 export default function EmployeeForm() {
     return(
         <Grid item xs={3} component="form" className={'form'}>
-            <h2>Не нашел ответ на свой вопрос ?</h2>
+            <h2 className={'formTitle'}>Не нашел ответ на свой вопрос ?</h2>
             <p>Задай его нам и мы обазательно тебе ответим!</p>
             <TextFields type={'email'} placeholder={'E-mail'}/>
             <TextFields type={'name'} placeholder={'Имя'}/>
