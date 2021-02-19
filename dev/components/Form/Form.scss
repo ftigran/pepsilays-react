@@ -1,0 +1,25 @@
+.form{
+    background: #10417B;
+    border-radius: 10px;
+    box-sizing: border-box;
+    .checkboxContainer{
+        margin:0;
+        font-family: 'Gotham Pro';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+
+        span.checkbox{
+            width: 30px;
+            height: 30px;
+            background: #FFFFFF;
+            border: 1px solid #DADBDD;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            svg{opacity: 0;}
+        }
+    }
+}

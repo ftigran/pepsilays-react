@@ -1,20 +1,36 @@
+import React from 'react';
+
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Grid from '@material-ui/core/Grid';
+import TextFields from '../TextField/TextField'
+import './Form.scss'
+import  {question} from '../Modal/SimpleModal/SimpleModal'
+
+
 export default function EmployeeForm() {
-
-    const validate = (fieldValues = values) => {
-        let temp = { ...errors }
-        if ('name' in fieldValues)
-            temp.fullName = fieldValues.fullName ? "" : "This field is required."
-        if ('email' in fieldValues)
-            temp.email = (/$^|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
-        if ('mobile' in fieldValues)
-            temp.mobile = fieldValues.mobile.length > 9 ? "" : "Minimum 10 numbers required."
-        if ('departmentId' in fieldValues)
-            temp.departmentId = fieldValues.departmentId.length != 0 ? "" : "This field is required."
-        setErrors({
-            ...temp
-        })
-
-        if (fieldValues == values)
-            return Object.values(temp).every(x => x == "")
+    return(
+        <Grid item xs={3} component="form" className={'form'}>
+            <h2>Не нашел ответ на свой вопрос ?</h2>
+            <p>Задай его нам и мы обазательно тебе ответим!</p>
+            <TextFields type={'email'} placeholder={'E-mail'}/>
+            <TextFields type={'name'} placeholder={'Имя'}/>
+            <TextFields type={'message'} placeholder={'Сообщение'}/>
+            <FormControlLabel
+            control={
+                <Checkbox
+                className="checkbox"
+                name="checkedB"
+                color="primary"
+                checkedIcon={<img src={'../dev/img/checkbox.svg'}/>}
+                />
+            }
+            className
+            ='checkboxContainer'
+            label="Согласие на обработку персональных данных"
+            />
+            {question}
+        </Grid>    )
     }
-    }
+
+    

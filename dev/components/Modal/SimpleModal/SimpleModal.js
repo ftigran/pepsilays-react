@@ -1,18 +1,20 @@
 import React from 'react';
 import Modal from '../Modal'
-import Button from '@material-ui/core/Button';
 
 import './SimpleModal.scss'
 
 export default function SimpleModal(props) {
     return(
-        <Modal className={' SimpleModal'} title={props.title} btnText={props.btnText}>
+        <Modal 
+        className={' SimpleModal'} 
+        title={props.title} 
+        btnText={props.btnText}
+        childBtnText={'OK'}
+        >
             <p className={'SimpleModalText'}>
                 {props.text}
             </p>
-            <Button className={'SimpleModalBtn'}>
-                ОК   
-            </Button>
+
         </Modal>
     )
 }
@@ -31,6 +33,12 @@ export const regCheck= <SimpleModal
 title={'Регистрация чека'}
 text={'Спасибо, чек принят для проверки. Результат проверки станет доступен в твоем Личном кабинете в течение ближайших 3-х рабочих дней.'}
 btnText={'3'} 
+/>
+
+export const question= <SimpleModal
+title={'Ваш вопрос отправлен'}
+text={'Ответ поступин в ближайшее время на указанную почту'}
+btnText={'Задать вопрос'} 
 />
 
 

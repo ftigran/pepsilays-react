@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-
+import './TextField.scss'
 export default function TextFieldTemplate(props){
     let regular;
     let error;
@@ -38,14 +38,14 @@ export default function TextFieldTemplate(props){
     }
     return(
         <TextField
-                label={props.label}
-                 placeholder={props.placeholder}
-                 required={true}
-                 value={val}
-                 onChange={handleChange}
-                 error={errors!=''}
-                 helperText={errors}
-                 variant={'outlined'}
+                id="outlined"
+                label={props.placeholder}
+                variant="outlined"
+                value={val}
+                helperText={errors}
+                onChange={handleChange}
+                error={errors!=''}
+                 className='TextFields'
                  ></TextField>
     )
 }

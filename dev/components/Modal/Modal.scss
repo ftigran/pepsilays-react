@@ -1,3 +1,20 @@
+.modalContainer .modalBtn, .modalWindow .modalBtn{
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    height: 45px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #10417B;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 15px;
+    width: 100%;
+}
+
 .modalWindow{
     position: relative;
     display: flex;
@@ -13,6 +30,9 @@
             height: 31px;
         }
     }
+    .modalBtn{
+        width: 200px;
+    }
     background: #10417B;
     padding: 55px 75px 50px;
     max-width: 600px;
@@ -22,7 +42,7 @@
     border-radius: 8px;
 
     h2{
-        font-family: Montserrat;
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: bold;
         font-size: 24px;

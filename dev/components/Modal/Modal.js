@@ -4,6 +4,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 
 import './Modal.scss'
 
@@ -19,8 +20,8 @@ export default function TransitionsModal(props) {
   };
 
   return (
-    <div>
-      <button type="button" onClick={handleOpen}>
+    <div className='modalContainer'>
+      <button type="button" onClick={handleOpen} className={'modalBtn'}>
         {props.btnText}
       </button>
       <Modal
@@ -46,9 +47,21 @@ export default function TransitionsModal(props) {
                     <CloseIcon/>
                 </IconButton>
             {props.children}
+            {getBtn(props.childBtnText, handleClose)}
+            
           </div>
         </Fade>
       </Modal>
     </div>
   );
 }
+
+function getBtn(name, handle){
+  if (name){
+    return <Button className={'modalBtn'} 
+    onClick={handle}
+    >
+      {name}
+    </Button>
+  }
+} 

@@ -1,15 +1,14 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
-import Cleave from 'cleave.js/react';
 
 import Questions from '../../Questions/Questions'
 import Modal from '../../Modal/Modal'
-import TextFields from '../../TextField/TextField'
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import {verify} from '../../Modal/SimpleModal/SimpleModal'
+import Form from '../../Form/Form'
 
 export default function FAQ(){
     
@@ -21,20 +20,7 @@ export default function FAQ(){
                 phone: true,
                 phoneRegionCode: 'RU'
                 }}/> */}
-                <TextFields type={'email'} placeholder={'e-mail'}/>
-                <TextFields type={'name'} placeholder={'Имя'}/>
-                <TextFields type={'message'} placeholder={'Сообщение'}/>
-                
-                <FormControlLabel
-        control={
-          <Checkbox
-            checked
-            name="checkedB"
-            color="primary"
-          />
-        }
-        label="Согласие на обработку персональных данных"
-      />
+              <Form/>
 
 
             {verify}
@@ -44,30 +30,13 @@ export default function FAQ(){
                 title='Вопрос отправлен'
                 >
                 </Modal>
-            <Paper component="form" className={'classes.root'}>
-                <h2>Не нашел ответ на свой вопрос ?</h2>
-                <p>Задай его нам и мы обазательно тебе ответим!</p>
-                
-      <InputBase
-        className={'classes.input'}
-        placeholder="Search Google Maps"
-        inputProps={{ 'aria-label': 'search google maps' }}
-      />
-      <IconButton type="submit" className={'classes.iconButton'} aria-label="search">
-        <SearchIcon />
-      </IconButton>
-      <Divider className={'classes.divider'} orientation="vertical" />
-      <IconButton color="primary" className={'classes.iconButton'} aria-label="directions">
-        <DirectionsIcon />
-      </IconButton>
-    </Paper>
+            
             </Grid>
             
         </Grid>
         
     )
 }
-import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
