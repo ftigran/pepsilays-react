@@ -9,30 +9,19 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import {verify} from '../../Modal/SimpleModal/SimpleModal'
 import Form from '../../Form/Form'
+import './faq.scss'
 
 export default function FAQ(){
     
     return(
-        <Grid container direction={'row'} justify={'space-between'}>
+        <Grid container direction={'row'} justify={'space-between'} className={'FAQ'}>
             <Questions/>
             {/* <Cleave 
             options={{
                 phone: true,
                 phoneRegionCode: 'RU'
                 }}/> */}
-              <Form/>
-
-
-            {verify}
-            <Grid item xs={4}>
-                <Modal 
-                btnText={'Задать вопрос'} 
-                title='Вопрос отправлен'
-                >
-                </Modal>
-            
-            </Grid>
-            
+              <Form xs={3}/>
         </Grid>
         
     )

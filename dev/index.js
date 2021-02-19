@@ -7,7 +7,7 @@ import FAQ from "./components/pages/faq/faq.js";
 
 import './index.scss';
 
-ReactDOM.render(<FAQ />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 
 import Main from './components/pages/main/main' //++

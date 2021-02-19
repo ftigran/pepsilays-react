@@ -22,6 +22,7 @@ import Footer from './Footer/Footer'
 import './App.scss'
 import Winners from "./Winners/Winners";
 
+import FAQ from './pages/faq/faq'
 
 
 
@@ -35,9 +36,7 @@ class App extends Component {
                 <Header/>
                     <Switch>
                         <Route exact path="/faq">
-                            <h2>
-                                FAQ
-                            </h2>
+                            <FAQ/>
                         </Route>
                         <Route exact path="/">
                             <Main/>
