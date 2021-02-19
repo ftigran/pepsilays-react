@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
 import './TextField.scss'
+
 export default function TextFieldTemplate(props){
     let regular;
     let error;

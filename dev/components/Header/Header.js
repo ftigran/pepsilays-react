@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-
-
-
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
@@ -14,9 +11,14 @@ import Button from '@material-ui/core/Button';
 
 import List from './List/List';
 import SlideList from './SlideList';
+import store from '../Redux/store'
 
 import './Header.scss'
-
+const a = ()=>{
+  if (store.getState().user){
+    return <h1>L332og</h1>
+  }
+}
 function HideOnScroll(props) {
     const { children, window } = props;
     // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -42,6 +44,8 @@ function HideOnScroll(props) {
 
 
 export default function Header(props){
+  let text
+  store.subscribe(()=>text=store.getState().user) 
     return(
         <React.Fragment>
                     <CssBaseline />
@@ -49,8 +53,8 @@ export default function Header(props){
                         <AppBar className={'header'}>
                             <img src="./dev/img/logo.svg"/>
                             <List/>
+                            <h1>{text}</h1>
                             <SlideList/>
-                            
                         </AppBar>
                     </HideOnScroll>
                     </React.Fragment>

@@ -28,7 +28,6 @@ import FAQ from './pages/faq/faq'
 
 
 
-
 class App extends Component {
     render() {
         return (
@@ -52,7 +51,3 @@ class App extends Component {
 }
 
 export default App;
-
-function aa(){
-    alert('qqq')
-}
