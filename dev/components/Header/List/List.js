@@ -12,12 +12,8 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Link as LinkR, animateScroll as scroll } from "react-scroll";
 
 import './List.scss'
-import store from '../../Redux/store'
-const userLog={
-    type: 'CHANGE_USER',
-    payload: 'Ivan'
-}
-const funk = ()=>store.dispatch(userLog)
+import UserWithStore from './User/User'
+
 export default function List() {
     return(
         <Grid container component={'nav'} className={'headerList'} justify={'flex-end'}>
@@ -48,6 +44,7 @@ export default function List() {
                     </LinkR>
                 </li>
                 <div className='headerListGap'></div>
+
                 <li className={'headerListReg'}>
                     <LinkR to='reg' spy={true} smooth={true} duration={500}>
                         <Link to="/registration">
@@ -55,7 +52,7 @@ export default function List() {
                         </Link>
                     </LinkR>
                 </li>
-                <button onClick={funk}/>
+                <UserWithStore/>
                 <li className={'headerListEnter'}>
                     <LinkR to='enter' spy={true} smooth={true} duration={500}>
                         <Link to="/enter">
