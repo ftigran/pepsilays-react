@@ -18,6 +18,7 @@ import Random from './Random/Random'
 import Main from './pages/main/main'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
+import {Registration} from './pages/Registration/Registration'
 
 import './App.scss'
 import Winners from "./Winners/Winners";
@@ -36,6 +37,9 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/faq">
                             <FAQ/>
+                        </Route>
+                        <Route path="/reg">
+                            <Registration/>
                         </Route>
                         <Route exact path="/">
                             <Main/>

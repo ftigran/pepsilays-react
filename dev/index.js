@@ -7,10 +7,11 @@ import Log from "./components/Modal/LoginModal/LoginModal";
 import list from "./components/Header/List/List";
 //import FAQ from "./components/pages/faq/faq.js";
 import './index.scss';
+import {Registration} from '../dev/components/pages/Registration/Registration'
 
 
 ReactDOM.render(
-  <App/>
+  <Registration/>
 
 , document.getElementById("root"));
 

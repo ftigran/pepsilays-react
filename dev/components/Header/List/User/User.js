@@ -4,7 +4,6 @@ import {Provider, connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import {store} from '../../../../store/store'
 import {changeUser} from '../../../../store/actions'
-import { Link as LinkR, animateScroll as scroll } from "react-scroll";
 import {
     BrowserRouter as Router,
     Switch,
@@ -33,14 +32,13 @@ class User extends React.Component{
   
             return(
                 <li className={'User'}>
+                    <li className={'headerListReg'}>
+                    
+                </li>
+                        <Link to="/reg">
+                            Регистрация
+                        </Link>
                   <LoginModal/>
-
-                  {/* <LinkR to='reg' spy={true} smooth={true} duration={500}>
-                      <Link to="/registration">
-                          Регистрация
-                      </Link>
-                  </LinkR>
-                    */}
                 </li>
             )
         }

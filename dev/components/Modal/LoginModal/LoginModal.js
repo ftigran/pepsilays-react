@@ -11,8 +11,8 @@ import {WrapedUserError} from '../UserLoginErrorModal/UserLoginErrorModal'
 function LoginModal(props){
     const users = [
         createUsers('1@Q.ru', 555555, 'Юлия'),
-        createUsers('2@Q.ru', 123456, 'Юрий')
-
+        createUsers('2@Q.ru', 123456, 'Юрий'),
+        createUsers('3@Q.ru', 111111, 'Алексей')
       ]
     let SetEmail = setEmail.bind(this);
     let SetPass = setPass.bind(this);
