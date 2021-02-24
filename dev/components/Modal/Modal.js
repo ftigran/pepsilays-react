@@ -9,8 +9,8 @@ import Button from '@material-ui/core/Button';
 import './Modal.scss'
 
 export default function TransitionsModal(props) {
-  const [open, setOpen] = React.useState(false);
-
+  const [open, setOpen] = React.useState(props.isOpen);
+console.log(props.isOpen)
   const handleOpen = () => {
     setOpen(true);
   };
@@ -21,9 +21,8 @@ export default function TransitionsModal(props) {
 
   return (
     <div className='modalContainer'>
-      <button type="button" onClick={handleOpen} className={'modalBtn'}>
-        {props.btnText}
-      </button>
+      {getBtn(props.btnText, handleOpen)}
+      
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -65,3 +64,4 @@ function getBtn(name, handle, btnClass){
     </Button>
   }
 } 
+

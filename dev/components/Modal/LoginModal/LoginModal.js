@@ -3,65 +3,72 @@ import React, { Component } from "react";
 import Button from '@material-ui/core/Button';
 import Modal from '../Modal'
 import TextField from '../../TextField/TextField'
-import { changeUser } from "../../../store/actions";
+import { changeUser, toggleError} from "../../../store/actions";
 import { connect } from "react-redux";
 import './LoginModal.scss'
+import {WrapedUserError} from '../UserLoginErrorModal/UserLoginErrorModal'
 
-class LoginModal extends React.Component{
-    constructor(){
-        super();
-        this.setEmail = this.setEmail.bind(this);
-        this.setPass = this.setPass.bind(this);
+function LoginModal(props){
+    const users = [
+        createUsers('1@Q.ru', 555555, 'Юлия'),
+        createUsers('2@Q.ru', 123456, 'Юрий')
 
-        this.users = [
-            this.createUsers('1@Q.ru', 555555, 'Юлия'),
-            this.createUsers('2@Q.ru', 123456, 'Юрий')
-    
-          ]
+      ]
+    let SetEmail = setEmail.bind(this);
+    let SetPass = setPass.bind(this);
+    function setEmail(val){
+        email=val
     }
-    setEmail(val){
-        this.email=val
+    function setPass(val){
+        pass=val
     }
-    setPass(val){
-        this.pass=val
-    }
-      handleEnter(){
-          (this.users.map((user)=>{
-              if (user.email==this.email&&user.pass==this.pass){
-                this.props.changeUser(user.name);
+    let email;
+    let pass;
+    function handleEnter(){
+          let name;
+          users.map((user)=>{
+              if (user.email==email&&user.pass==pass){
+                name = user.name;
               }
-          }))
+          })
+        if(name){
+            props.changeUser(name)
+        }else {
+            props.toggleError()
+            console.log(props)
+        }
       };
       
-      createUsers(email, pass, name){
+    function createUsers(email, pass, name){
         return {
           email,
           pass,
           name
         }
       }
-    render(){
         return (
             <Modal 
             className={' LoginModal'} 
             title='Авторизация' 
             btnText={'Войти'}
             >
-                <TextField handler={this.setEmail} className='LoginModalEmail' type='email' placeholder='E-mail'></TextField>
+            <WrapedUserError/>
+
+                <TextField handler={SetEmail} className='LoginModalEmail' type='email' placeholder='E-mail'></TextField>
     
-                <TextField handler={this.setPass} className='LoginModalPassword' type='password' placeholder='Пароль'></TextField>
+                <TextField handler={SetPass} className='LoginModalPassword' type='password' placeholder='Пароль'></TextField>
                 <a className='LoginModalReset' href='empty'>Забыл пароль?</a>
                 <Button 
                 className='LoginModalEnter'
                 onClick={()=>{
-                    this.handleEnter();
+                    handleEnter();
                     }}>
                         Войти
                 </Button>
                 <Button 
                 className='LoginModalReg'
                 onClick={()=>{
-                    this.handleEnter();
+                    handleEnter();
                     }}>
                         Зарегестрироваться
                 </Button>
@@ -76,9 +83,8 @@ class LoginModal extends React.Component{
         )
     }
     
-}
 
 export default connect(
     null,
-    {changeUser}
+    {changeUser, toggleError}
   )(LoginModal);

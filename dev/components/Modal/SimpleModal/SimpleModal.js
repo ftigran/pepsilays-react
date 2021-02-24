@@ -2,21 +2,25 @@ import React from 'react';
 import Modal from '../Modal'
 
 import './SimpleModal.scss'
+export class SimpleModal extends React.Component{
+    render(){
+    console.log('rendSSimple')
+    console.log(this.props)
 
-export default function SimpleModal(props) {
     return(
         <Modal 
         className={' SimpleModal'} 
-        title={props.title} 
-        btnText={props.btnText}
+        title={this.props.title} 
+        btnText={this.props.btnText}
         childBtnText={'OK'}
+        isOpen={this.props.isOpen}
         >
             <p className={'SimpleModalText'}>
-                {props.text}
+                {this.props.text}
             </p>
-
         </Modal>
     )
+}
 }
 export const sbros= <SimpleModal
 title={'Восстановление пароля'}
@@ -41,6 +45,16 @@ text={'Ответ поступин в ближайшее время на ука�
 btnText={'Задать вопрос'} 
 />
 
-
-
+export class UserError extends React.Component{
+    render(){
+        console.log('this')
+        console.log(this.props)
+        console.log(this.props.error)
+    return <SimpleModal
+title={'Пользователь не найден'}
+text={'Проверьте поля'}
+isOpen= {this.props.error}
+/>
+}
+}
 
