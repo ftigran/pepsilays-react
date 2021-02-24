@@ -35,8 +35,13 @@ export default function TextFieldTemplate(props){
         const {target: {value}}= event;
         setErrors('')
         setVal(value);
+        
         if (!regular.test(value)||maxLenght<value.length){
             setErrors(error)
+        }else{
+            if (props.handler){
+                props.handler(value)
+            }
         }
     }
     return(

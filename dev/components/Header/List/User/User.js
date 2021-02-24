@@ -12,6 +12,7 @@ import {
     Link
 } from "react-router-dom";
 import './User.scss'
+
 class User extends React.Component{
     render(){
         console.log(this.props)
