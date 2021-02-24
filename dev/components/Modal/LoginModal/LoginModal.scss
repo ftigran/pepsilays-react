@@ -1,0 +1,35 @@
+.LoginModal{
+    .LoginModalEmail{
+        margin: 35px 0 15px;
+    }
+    .LoginModalReset{
+        font-family: 'Gotham Pro';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 17px;
+        
+        align-self: flex-end;
+        color: #fff;
+        margin: 40px 0;
+    }
+
+    button{
+        &.LoginModalReg, &.LoginModalEnter{
+            padding: 0 15px;
+            border-radius: 5px;
+            height: 45px;
+            width: 100%;
+        }
+        &.LoginModalEnter{
+            background-color: #fff;
+            color: #004088;
+        }
+        &.LoginModalReg{
+            border: 2px solid #fff;
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+    
+}

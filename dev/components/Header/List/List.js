@@ -45,21 +45,21 @@ export default function List() {
                 </li>
                 <div className='headerListGap'></div>
 
-                <li className={'headerListReg'}>
+                {/* <li className={'headerListReg'}>
                     <LinkR to='reg' spy={true} smooth={true} duration={500}>
                         <Link to="/registration">
                             Регистрация
                         </Link>
                     </LinkR>
-                </li>
+                </li> */}
                 <UserWithStore/>
-                <li className={'headerListEnter'}>
+                {/* <li className={'headerListEnter'}>
                     <LinkR to='enter' spy={true} smooth={true} duration={500}>
                         <Link to="/enter">
                             Войти
                         </Link>
-                    </LinkR>    
-                </li>
+                    </LinkR>     
+                </li>*/}
             </ul>
         </Grid>
     )

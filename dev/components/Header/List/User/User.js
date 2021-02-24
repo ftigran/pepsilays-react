@@ -4,36 +4,42 @@ import {Provider, connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import {store} from '../../../../store/store'
 import {changeUser} from '../../../../store/actions'
-
-export let props;
+import { Link as LinkR, animateScroll as scroll } from "react-scroll";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import './User.scss'
 class User extends React.Component{
     render(){
-        console.log(this.props.user)
-        console.log(this.props.user)
+        console.log(this.props)
+        console.log(this.props.changeUser)
 
         if(this.props.user){
             return (
-                <li>
-                    <h2>Личный кабинет</h2>
-    <h2>{this.props.user}</h2>
+                <li className={'User'}>
+                    <LinkR to='cabinet' spy={true} smooth={true} duration={500} className={'UserCabinet'}>
+                      <Link to="/cabinet">
+                        Личный кабинет
+                      </Link>
+                    </LinkR>
+                    <span >{this.props.user}</span>
                 </li>)
         }
         else{
   
             return(
-                <li className={'headerListReg'}>
-                  <LoginModal store={this.props}/>
+                <li className={'User'}>
+                  <LoginModal/>
 
                   {/* <LinkR to='reg' spy={true} smooth={true} duration={500}>
                       <Link to="/registration">
                           Регистрация
                       </Link>
                   </LinkR>
-                  <LinkR to='enter' spy={true} smooth={true} duration={500}>
-                      <Link to="/enter">
-                          Войти
-                      </Link>
-                  </LinkR>   */}
+                    */}
                 </li>
             )
         }

@@ -48,7 +48,7 @@ export default function TextFieldTemplate(props){
                 helperText={errors}
                 onChange={handleChange}
                 error={errors!=''}
-                 className='TextFields'
+                 className={'TextFields ' +props.className}
                  ></TextField>
     )
 }

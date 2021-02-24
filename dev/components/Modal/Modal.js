@@ -47,7 +47,7 @@ export default function TransitionsModal(props) {
                     <CloseIcon/>
                 </IconButton>
             {props.children}
-            {getBtn(props.childBtnText, handleClose)}
+            {getBtn(props.childBtnText, handleClose, props.btnClass)}
             
           </div>
         </Fade>
@@ -56,9 +56,9 @@ export default function TransitionsModal(props) {
   );
 }
 
-function getBtn(name, handle){
+function getBtn(name, handle, btnClass){
   if (name){
-    return <Button className={'modalBtn'} 
+    return <Button className={'modalBtn '+btnClass} 
     onClick={handle}
     >
       {name}

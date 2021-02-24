@@ -1,0 +1,14 @@
+.User{
+    &Cabinet{
+        margin-right: 30px;
+
+    }
+    button.modalBtn{
+        border: 2px solid #fff;
+        padding: 0 15px;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #fff;
+        height: 32px;
+    }
+}

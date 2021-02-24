@@ -1,31 +1,58 @@
 import React, { Component } from "react";
 
+import Button from '@material-ui/core/Button';
 import Modal from '../Modal'
 import TextField from '../../TextField/TextField'
-import { store, ChangeUser } from "../../../store/store";
-export default function LoginModal(props){
-    return (
-        <Modal 
-        className={' LoginModal'} 
-        title='Авторизация' 
-        btnText={'Войти'}
-        >
-            <TextField type='email' placeholder='E-mail'></TextField>
+import { changeUser } from "../../../store/actions";
+import { connect } from "react-redux";
+import './LoginModal.scss'
 
-            <TextField type='password' placeholder='Пароль'></TextField>
-            <a>Забыл пароль?</a>
-            <button 
-            onClick={()=>{
-                store.ChangeUser('Vasya')
-                console.log(store)
-                }}>Войти</button>
+class LoginModal extends React.Component{
+    constructor(props) {
+        super(props);
+      }
+      handleEnter(){
+        this.props.changeUser('Юлия')
+      };
+    render(){
+        return (
             <Modal 
             className={' LoginModal'} 
             title='Авторизация' 
-            btnText={'Зарегистрироваться'}
-            childBtnText={'OK'}
+            btnText={'Войти'}
             >
+                <TextField className='LoginModalEmail' type='email' placeholder='E-mail'></TextField>
+    
+                <TextField className='LoginModalPassword' type='password' placeholder='Пароль'></TextField>
+                <a className='LoginModalReset' href='empty'>Забыл пароль?</a>
+                <Button 
+                className='LoginModalEnter'
+                onClick={()=>{
+                    this.handleEnter();
+                    }}>
+                        Войти
+                </Button>
+                <Button 
+                className='LoginModalReg'
+                onClick={()=>{
+                    this.handleEnter();
+                    }}>
+                        Зарегестрироваться
+                </Button>
+                {/* <Modal 
+                className={' LoginModal'} 
+                title='Авторизация' 
+                btnText={'Зарегистрироваться'}
+                childBtnText={'OK'}
+                > 
+                </Modal>*/}
             </Modal>
-        </Modal>
-    )
+        )
+    }
+    
 }
+
+export default connect(
+    null,
+    {changeUser}
+  )(LoginModal);
