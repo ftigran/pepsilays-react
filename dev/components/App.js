@@ -19,6 +19,7 @@ import Main from './pages/main/main'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import {Registration} from './pages/Registration/Registration'
+import Cabinet from './pages/Cabinet/Cabinet'
 
 import './App.scss'
 import Winners from "./Winners/Winners";
@@ -34,20 +35,7 @@ class App extends Component {
         return (
             <Router>
                 <Header/>
-                    <Switch>
-                        <Route exact path="/faq">
-                            <FAQ/>
-                        </Route>
-                        <Route path="/reg">
-                            <Registration/>
-                        </Route>
-                        <Route exact path="/">
-                            <Main/>
-                        </Route>
-                        <Route path="/#">
-                            <Main/>
-                        </Route>
-                    </Switch>
+                <Cabinet/>
                 <Footer/>
             </Router>
         );

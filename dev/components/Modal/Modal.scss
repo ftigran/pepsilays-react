@@ -12,9 +12,15 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 15px;
-    width: 100%;
+    box-sizing: border-box;
+    .modalBtn{
+        width: 200px;
+        box-sizing: border-box;
+    }
 }
-
+.modalContainer{
+    box-sizing: border-box;
+}
 .modalWindow{
     position: relative;
     display: flex;

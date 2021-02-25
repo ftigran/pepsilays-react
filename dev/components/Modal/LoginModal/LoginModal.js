@@ -7,7 +7,13 @@ import { changeUser, toggleError} from "../../../store/actions";
 import { connect } from "react-redux";
 import './LoginModal.scss'
 import {WrapedUserError} from '../UserLoginErrorModal/UserLoginErrorModal'
-
+import { useHistory } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 function LoginModal(props){
     const users = [
         createUsers('1@Q.ru', 555555, 'Юлия'),
@@ -24,6 +30,8 @@ function LoginModal(props){
     }
     let email;
     let pass;
+    let history = useHistory();
+
     function handleEnter(){
           let name;
           users.map((user)=>{
@@ -32,8 +40,14 @@ function LoginModal(props){
               }
           })
         if(name){
-            props.changeUser(name)
+            props.changeUser({
+              prizi: 4,
+              cheki: 2,
+              name: "Егор",
+            })
+            //history.push('/cabinet');
         }else {
+
             props.toggleError()
             console.log(props)
         }

@@ -4,6 +4,7 @@ import {Provider, connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import {store} from '../../../../store/store'
 import {changeUser} from '../../../../store/actions'
+import Button from '@material-ui/core/Button';
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,21 +21,22 @@ class User extends React.Component{
         if(this.props.user){
             return (
                 <li className={'User'}>
-                    <LinkR to='cabinet' spy={true} smooth={true} duration={500} className={'UserCabinet'}>
                       <Link to="/cabinet">
                         Личный кабинет
                       </Link>
-                    </LinkR>
-                    <span >{this.props.user}</span>
+                    <span >{this.props.user.name}</span>
                 </li>)
         }
         else{
   
             return(
                 <li className={'User'}>
-                    <Link to="/reg" className={'headerListReg'}>
-                        Регистрация
-                    </Link>       
+                      
+                    <Button className={'headerListReg'}>
+                        <Link to="/reg">
+                            Регистрация
+                        </Link>     
+                    </Button>
                     <LoginModal/>
                 </li>
             )
