@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import TextFields from '../TextField/TextField'
 import './Form.scss'
 import  {question} from '../Modal/SimpleModal/SimpleModal'
+import Checkbox from '../Checkbox/Checkbox'
 
 
 export default function EmployeeForm() {
@@ -16,19 +15,9 @@ export default function EmployeeForm() {
             <TextFields type={'email'} placeholder={'E-mail'}/>
             <TextFields type={'name'} placeholder={'Имя'}/>
             <TextFields type={'message'} placeholder={'Сообщение'}/>
-            <FormControlLabel
-            control={
-                <Checkbox
-                className="checkbox"
-                name="checkedB"
-                color="primary"
-                checkedIcon={<img src={'../dev/img/checkbox.svg'}/>}
-                />
-            }
-            className
-            ='checkboxContainer'
-            label="Согласие на обработку персональных данных"
-            />
+            <Checkbox>
+                Согласие на обработку персональных данных
+            </Checkbox>
             {question}
         </Grid>    )
     }

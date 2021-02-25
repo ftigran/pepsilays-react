@@ -74,9 +74,8 @@ export default function TextFieldTemplate(props){
 
 export function TextFieldPhone(props){
     return (
-        <InputMask className='TextFieldPhone' mask="+7 (999) 999-99-99">
-        
-            <TextFieldTemplate type={'phone'} placeholder={'Телефон'}  className={'TextFields'} />
+        <InputMask mask="+7 (999) 999-99-99" >
+            <TextField type="tel" id="outlined" variant="outlined" label={'Телефон'} className='TextFields'/>
         </InputMask>
     )
 }

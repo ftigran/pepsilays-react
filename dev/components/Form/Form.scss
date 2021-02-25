@@ -23,25 +23,9 @@
         .TextFields{
             margin: 7.5px 0;
         }
-    .checkboxContainer{
-        margin:0;
-        font-family: 'Gotham Pro';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-        max-width: 300px;
-        margin: 35.5px 0 34px;
-        span.checkbox{
-            width: 30px;
-            height: 30px;
-            background: #FFFFFF;
-            border: 1px solid #DADBDD;
-            box-sizing: border-box;
-            border-radius: 4px;
-            margin-right: 10px;
-            svg{opacity: 0;}
+        label.checkboxContainer{
+            max-width: 300px;
+            margin: 35.5px 0 34px;
+
         }
-    }
 }
