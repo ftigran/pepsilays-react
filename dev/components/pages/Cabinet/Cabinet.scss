@@ -107,7 +107,7 @@ color: #FFDD00;
             font-weight: normal;
             text-transform: uppercase;
             text-align: center;
-            
+            padding-top: 9px;
             &.borderedBtn{
                 border: 2px solid #FFDD00;
                 border-radius: 9px;
@@ -115,6 +115,7 @@ color: #FFDD00;
                 
                 font-size: 12px;
                 line-height: 15px;
+                padding-top: 8px;
 
 
                 color: #FFDD00;
@@ -207,4 +208,10 @@ button{
 .tabpage{
     width: 100%;
     max-width: 794px;
+    div .table .tableHeader th{
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }

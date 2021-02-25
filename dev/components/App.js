@@ -35,7 +35,23 @@ class App extends Component {
         return (
             <Router>
                 <Header/>
-                <Cabinet/>
+                    <Switch>
+                        <Route exact path="/faq">
+                            <FAQ/>
+                        </Route>
+                        <Route path="/reg">
+                            <Registration/>
+                        </Route>
+                        <Route path="/cabinet">
+                            <Cabinet/>
+                        </Route>
+                        <Route exact path="/">
+                            <Main/>
+                        </Route>
+                        <Route path="/#">
+                            <Main/>
+                        </Route>
+                    </Switch>
                 <Footer/>
             </Router>
         );

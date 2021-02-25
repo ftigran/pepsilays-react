@@ -21,10 +21,11 @@ class User extends React.Component{
         if(this.props.user){
             return (
                 <li className={'User'}>
-                      <Link to="/cabinet">
+                      <Link className="cabinetLink" to="/cabinet">
                         Личный кабинет
-                      </Link>
+                      
                     <span >{this.props.user.name}</span>
+                    </Link>
                 </li>)
         }
         else{
