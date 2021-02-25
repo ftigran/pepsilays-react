@@ -11,7 +11,7 @@ import {Registration} from '../dev/components/pages/Registration/Registration'
 
 
 ReactDOM.render(
-  <Registration/>
+  <App/>
 
 , document.getElementById("root"));
 

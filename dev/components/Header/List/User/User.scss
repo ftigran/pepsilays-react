@@ -3,6 +3,7 @@
         margin-right: 30px;
 
     }
+    display: flex;
     button.modalBtn{
         border: 2px solid #fff;
         padding: 0 15px;
@@ -10,5 +11,14 @@
         background-color: transparent;
         color: #fff;
         height: 32px;
+    }
+    .headerListReg{
+        height: 32px;
+        background: #fff;
+        color: #10417B;
+        border-radius: 5px;
+        padding: 0 15px;
+        margin-right: 30px;
+        text-align: center
     }
 }

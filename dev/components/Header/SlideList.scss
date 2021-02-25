@@ -7,9 +7,17 @@ div.MuiDrawer-root.MuiDrawer-modal{
 button.headerMenu{
     display: none;
 }
+
 .sliderList{
     background-color: #10417B;
     height: 100%;
+    .User{
+        flex-direction: column;
+        a{
+            width: 290px;
+            margin: 0 0 15px;
+        }
+    }
     ul{
         padding: 0;
         flex-direction: column;

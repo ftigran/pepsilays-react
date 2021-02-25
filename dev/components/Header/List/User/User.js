@@ -32,13 +32,10 @@ class User extends React.Component{
   
             return(
                 <li className={'User'}>
-                    <li className={'headerListReg'}>
-                    
-                </li>
-                        <Link to="/reg">
-                            Регистрация
-                        </Link>
-                  <LoginModal/>
+                    <Link to="/reg" className={'headerListReg'}>
+                        Регистрация
+                    </Link>       
+                    <LoginModal/>
                 </li>
             )
         }
