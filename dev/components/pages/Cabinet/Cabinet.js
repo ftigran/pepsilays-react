@@ -14,9 +14,9 @@ import './Cabinet.scss'
 class Cab extends React.Component{
 render()    {
     return(
-        <Grid container direction="column" alignItems='center'>
+        <Grid container direction="column" alignItems='center' className='cabinet'>
             <h1>Личный кабинет</h1>
-            <p>Срок регистрации чеков: 
+            <p className='cabinetSrok'>Срок регистрации чеков: <br/>
         с 10.02.2021 по 25.03.2021 года</p>
         <div className='cabinetCard'>
             <div className='cabinetInfo'>
@@ -48,6 +48,7 @@ render()    {
                 </Button>
             </div>
         </div>
+        <SimpleTabs/>
         </Grid>
         
     )
@@ -83,3 +84,95 @@ export default class CabWithStore extends React.Component{
     )
 }
 }
+
+
+
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+
+function SimpleTabs() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  const ColumnsCheki = [
+    { 
+        id: 'date',
+        label: 'Дата',
+        },
+      { 
+        id: 'fd',
+        label: 'ФД',
+     },
+      {
+        id: 'stat',
+        label: 'Статус модерации',
+      },
+  ]
+  function createData(date, fd, stat=false){
+      stat==true ? stat='Принят':stat='Отклонен'
+      return {date,fd,stat}
+  }
+  const rowsCheki = [
+    createData('25.02.21', 12345678, true),
+    createData('25.02.21', 12536748),
+    createData('25.02.21', 23635782, true),
+    createData('25.02.21', 15899346, true),
+
+  ]
+  return (
+    <div className='tabpage'>
+      <AppBar position="static" className="TabBar">
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+          <Tab label="Чеки" {...a11yProps(0)} />
+          <Tab label="Призы" {...a11yProps(1)} />
+        </Tabs>
+      </AppBar>
+      <TabPanel value={value} index={0}>
+        <Table 
+        columns={ColumnsCheki} 
+        rows={rowsCheki}
+        rowsPerPage={5}
+        />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        PRIZI
+      </TabPanel>
+    </div>
+  );
+}
+
+
+import Table from '../../Table/Table'
