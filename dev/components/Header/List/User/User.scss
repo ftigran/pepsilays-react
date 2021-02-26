@@ -1,4 +1,6 @@
 .User{
+    display: flex;
+
     button{
         margin-left: 30px;
         padding: 0;
@@ -7,6 +9,9 @@
         text-align: center;
         border-radius: 5px;
 
+    }
+    &Name{
+        margin-left: 30px;
     }
     button.modalBtn{
         border: 2px solid #fff;
@@ -17,19 +22,14 @@
         height: 32px;
     }
     .headerListReg{
-        background: #fff;
         a{color: #10417B;}
     }
-    &Guest{
-        display: flex;
-    }
+
 }
 li.User{
     margin: 0;
 }
 .cabinetLink{
     margin-left: 30px;
-    span{
-        margin-left: 30px;
-    }
+    
 }

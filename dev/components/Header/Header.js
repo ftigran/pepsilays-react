@@ -38,7 +38,17 @@ function HideOnScroll(props) {
 
 
 export default function Header(props){
-  let text
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
     return(
         <React.Fragment>
                     <CssBaseline />
@@ -46,7 +56,6 @@ export default function Header(props){
                         <AppBar className={'header'}>
                             <img src="./dev/img/logo.svg"/>
                             <List/>
-                            <h1>{text}</h1>
                             <SlideList/>
                         </AppBar>
                     </HideOnScroll>

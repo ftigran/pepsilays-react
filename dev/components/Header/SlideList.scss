@@ -11,15 +11,20 @@ button.headerMenu{
 .sliderList{
     background-color: #10417B;
     height: 100%;
-    .User a{
-        display: flex;
+    .User{
         flex-direction: column;
         text-align: center;
-            width: 290px;
+    } 
+    a{
+        width: 290px;
             margin: 0;
-            span{
-                margin: 15px 0 0;
-            }
+            
+            
+    }
+    .UserName{
+        margin: 15px 0 0;
+        text-align: center;
+        color: #fff;
     }
     ul{
         padding: 0;

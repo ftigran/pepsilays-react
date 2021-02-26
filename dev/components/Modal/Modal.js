@@ -57,7 +57,9 @@ console.log(props.isOpen)
 
 function getBtn(name, handle, btnClass){
   if (name){
-    return <Button className={'modalBtn '+btnClass} 
+    return <Button 
+    className={'modalBtn '+btnClass} 
+    color='secondaty'
     onClick={handle}
     >
       {name}

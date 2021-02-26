@@ -3,7 +3,7 @@ import LoginModal from '../../../Modal/LoginModal/LoginModal'
 import {Provider, connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import {store} from '../../../../store/store'
-import {changeUser} from '../../../../store/actions'
+import {changeUser, setPopup} from '../../../../store/actions'
 import Button from '@material-ui/core/Button';
 import {
     BrowserRouter as Router,
@@ -13,21 +13,29 @@ import {
 } from "react-router-dom";
 import './User.scss'
 import { Link as LinkR, animateScroll as scroll } from "react-scroll";
-
+import Popup from './Popup/Popup'
 class User extends React.Component{
     render(){
-        console.log(this.props)
-        console.log(this.props.changeUser)
 
+        const handleClick = (event) => {
+            this.props.setPopup(event.currentTarget);
+        };
         if(this.props.user){
             return (
                 <li className={'User'}>
                     <LinkR to='cabinet' spy={true} smooth={true} duration={500}>
                         <Link className="cabinetLink" to="/cabinet">
                             Личный кабинет
-                        <span >{this.props.user.name}</span>
                         </Link>
                     </LinkR>
+                    <Popup/> 
+
+                    <span 
+                    className={'UserName'}
+                        onClick={
+                            handleClick
+                        }
+                    >{this.props.user.name}</span>
                 </li>)
         }
         else{
@@ -35,10 +43,10 @@ class User extends React.Component{
             return(
                 <li className={'User UserGuest'}>
                       
-                    <Button className={'headerListReg'}>
+                    <Button color='primary' className={'headerListReg'}>
                         <Link to="/reg">
                             Регистрация
-                        </Link>     
+                        </Link>    
                     </Button>
                     <LoginModal/>
                 </li>
@@ -49,12 +57,14 @@ class User extends React.Component{
 
 const mapStateToProps=(state)=>{
     return {
-        user: state.user
+        user: state.user,
+        popupOpen: state.popupOpen
     }
 };
 const putActionsToProps=(dispatch)=>{
     return {
-        changeUser: bindActionCreators(changeUser, dispatch)
+        changeUser: bindActionCreators(changeUser, dispatch),
+        setPopup: bindActionCreators(setPopup, dispatch),
     }
 }
 
