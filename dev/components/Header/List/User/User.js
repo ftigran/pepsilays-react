@@ -12,6 +12,7 @@ import {
     Link
 } from "react-router-dom";
 import './User.scss'
+import { Link as LinkR, animateScroll as scroll } from "react-scroll";
 
 class User extends React.Component{
     render(){
@@ -21,11 +22,14 @@ class User extends React.Component{
         if(this.props.user){
             return (
                 <li className={'User'}>
-                      <Link className="cabinetLink" to="/cabinet">
-                        Личный кабинет
+                    <LinkR to='cabinet' spy={true} smooth={true} duration={500}>
+                        <Link className="cabinetLink" to="/cabinet">
+                            Личный кабинет
+                        
+                        <span >{this.props.user.name}</span>
+                        </Link>
+                    </LinkR>
                       
-                    <span >{this.props.user.name}</span>
-                    </Link>
                 </li>)
         }
         else{

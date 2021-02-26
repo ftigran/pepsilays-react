@@ -164,7 +164,7 @@ function SimpleTabs() {
         <Table 
         columns={ColumnsCheki} 
         rows={rowsCheki}
-        rowsPerPage={5}
+        rowsPerPage={2}
         />
       </TabPanel>
       <TabPanel value={value} index={1}>

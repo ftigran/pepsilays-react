@@ -8,49 +8,13 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '../Pagination/Pagination';
 
 import './Table.scss'
 
-function createData(date, email, name, priz) {
-    return { date, email, name, priz };
-  }
-
-const rows = [
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Evgeny', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'r.bol***@ya.ru', 'Роман', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-    createData('25.02.21', 'anya***@yahoo.com', 'Анна', 'Еженедельный'),
-
-];
-function getPagination(rowsPerPage, rows, page, handler){
-  if (rows>=rowsPerPage){
-  return(
-      <Pagination
-            className={'tablePagination'}
-            count={Math.ceil(rows/rowsPerPage)} 
-            page={page} 
-            onChange={handler}  
-            />
-  )
-  }
-}
-
 export default function StickyHeadTable(props) {
   const [page, setPage] = React.useState(1);
-  const [rowsPerPage, setRowsPerPage] = React.useState(props.rowsPerPage||5);
+  const rowsPerPage = props.rowsPerPage||5;
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -91,7 +55,12 @@ export default function StickyHeadTable(props) {
         </Table>
       </TableContainer>
       
-      {getPagination(rowsPerPage, props.rows.length,page, handleChangePage)}
+      <Pagination 
+      rowsPerPage={rowsPerPage} 
+      rows={props.rows.length}
+      page={page}
+      handler={handleChangePage}
+      />
       
     </Paper>
   );

@@ -21,7 +21,7 @@ export default function FAQ(){
                 phone: true,
                 phoneRegionCode: 'RU'
                 }}/> */}
-              <Form xs={3}/>
+              <Form/>
         </Grid>
         
     )

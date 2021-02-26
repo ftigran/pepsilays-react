@@ -1,5 +1,35 @@
 .FAQ{
     margin: auto;
-    padding: 173px 15px 0;
+    padding: 127px 15px 0;
     max-width: 1230px;
+}
+@media (max-width:1150px){
+    .FAQ{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        .form{
+            align-self: auto;
+            margin-top: 20px;
+            max-width: 388px;
+        }
+        .questions{
+            max-width: 700px;
+
+        }
+    }
+
+}
+@media (max-width:400px){
+    .FAQ {
+        padding: 0 10px;
+        .MuiAccordionSummary-expandIcon {
+            margin: 10px 10px 10px 0;
+            height: 40px;
+            width: 40px;
+        }
+        .questionsAccordeonTitle{
+            font-size: 22px;
+    }
+}
 }

@@ -6,7 +6,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '../Pagination/Pagination';
 
 import './Questions.scss'
 
@@ -70,8 +70,11 @@ function getAccordeon(arr){
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
+
+
+
     return(
-        <Grid item xs={7}className='questions'>
+        <Grid item xs={7} className='questions'>
             <h1>
                 Часто задаваемые вопросы
             </h1>
@@ -96,9 +99,10 @@ function getAccordeon(arr){
             })}
             <Pagination
             className={'FAQPagination'}
-            count={Math.ceil(arr.length/rowsPerPage)} 
+            rowsPerPage={rowsPerPage}
+            rows={arr.length} 
             page={page} 
-            onChange={handleChangePage}  
+            handler={handleChangePage}  
             />
         </Grid>
         

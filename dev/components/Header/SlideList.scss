@@ -11,12 +11,15 @@ button.headerMenu{
 .sliderList{
     background-color: #10417B;
     height: 100%;
-    .User{
+    .User a{
+        display: flex;
         flex-direction: column;
-        a{
+        text-align: center;
             width: 290px;
-            margin: 0 0 15px;
-        }
+            margin: 0;
+            span{
+                margin: 15px 0 0;
+            }
     }
     ul{
         padding: 0;
