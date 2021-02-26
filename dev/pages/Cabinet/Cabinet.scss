@@ -208,6 +208,9 @@ button{
 .tabpage{
     width: 100%;
     max-width: 794px;
+    .MuiTabs-indicator{
+        background-color: transparent;
+    }
     div .table .tableHeader th{
         font-style: normal;
         font-weight: 800;

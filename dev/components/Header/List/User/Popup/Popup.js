@@ -16,12 +16,13 @@ class popup extends React.Component{
 
         return (
             <Popper 
+                className='popupContainer'
                 open={Boolean(this.props.popupOpen)}
                 anchorEl={this.props.popupOpen}
                 onClose={()=>this.props.setPopup(null)}
                 anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'center',
+                    horizontal: 'right',
                   }}
                   transformOrigin={{
                     vertical: 'top',
