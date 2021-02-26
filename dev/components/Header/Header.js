@@ -8,7 +8,13 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Container from '@material-ui/core/Container';
 import Slide from '@material-ui/core/Slide';
 import Button from '@material-ui/core/Button';
-
+import { Link as LinkR, animateScroll as scroll } from "react-scroll";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import List from './List/List';
 import SlideList from './SlideList';
 
@@ -54,7 +60,11 @@ export default function Header(props){
                     <CssBaseline />
                     <HideOnScroll {...props}>
                         <AppBar className={'header'}>
-                            <img src="./dev/img/logo.svg"/>
+                            <LinkR to='main' spy={true} smooth={true} duration={500}>
+                              <Link to="/">
+                                <img src="./dev/img/logo.svg"/>
+                              </Link>
+                            </LinkR>
                             <List/>
                             <SlideList/>
                         </AppBar>

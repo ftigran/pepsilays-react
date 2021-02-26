@@ -9,3 +9,11 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('GothamPro.eot');
+	src: local('Gotham Pro'), local('GothamPro'),
+		url('./ofont.ru_Gotham Pro .ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}

@@ -22,12 +22,17 @@
     padding: 50px 0;
     position: relative;
     width:100%;
-    &BGtop{
+    &BG{
         width: 100%;
         position: absolute;
         top: -17%;
         left: 0px;
         z-index: -1;
+        &top{
+            top:5%;
+            height:95%;
+            object-fit: cover;
+        }
     }
     .randomScreen{
         min-height:800px;

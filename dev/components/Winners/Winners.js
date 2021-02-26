@@ -22,6 +22,7 @@ function Winners(){
             <Table
             rows={rows}
             columns={columns}
+            rowsPerPage={10}
             />
         </Box>
     )
