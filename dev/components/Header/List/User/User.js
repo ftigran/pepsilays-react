@@ -25,17 +25,15 @@ class User extends React.Component{
                     <LinkR to='cabinet' spy={true} smooth={true} duration={500}>
                         <Link className="cabinetLink" to="/cabinet">
                             Личный кабинет
-                        
                         <span >{this.props.user.name}</span>
                         </Link>
                     </LinkR>
-                      
                 </li>)
         }
         else{
   
             return(
-                <li className={'User'}>
+                <li className={'User UserGuest'}>
                       
                     <Button className={'headerListReg'}>
                         <Link to="/reg">

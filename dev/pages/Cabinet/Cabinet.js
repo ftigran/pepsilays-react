@@ -2,14 +2,11 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import Questions from '../../Questions/Questions'
-import Modal from '../../Modal/Modal'
-import Checkbox from '../../Checkbox/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '../../components/Checkbox/Checkbox';
 import Button from '@material-ui/core/Button';
 
-import {verify} from '../../Modal/SimpleModal/SimpleModal'
-import Form from '../../Form/Form'
+import {verify} from '../../components/Modal/SimpleModal/SimpleModal'
+import Form from '../../components/Form/Form'
 import './Cabinet.scss'
 class Cab extends React.Component{
 render()    {
@@ -60,7 +57,7 @@ render()    {
 
 import {Provider, connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
-import {store} from '../../../store/store'
+import {store} from '../../store/store'
 
 const mapStateToProps=(state)=>{
     return {
@@ -175,4 +172,4 @@ function SimpleTabs() {
 }
 
 
-import Table from '../../Table/Table'
+import Table from '../../components/Table/Table'

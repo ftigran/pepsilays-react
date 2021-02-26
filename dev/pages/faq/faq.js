@@ -2,13 +2,13 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import Questions from '../../Questions/Questions'
-import Modal from '../../Modal/Modal'
+import Questions from '../../components/Questions/Questions'
+import Modal from '../../components/Modal/Modal'
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-import {verify} from '../../Modal/SimpleModal/SimpleModal'
-import Form from '../../Form/Form'
+import {verify} from '../../components/Modal/SimpleModal/SimpleModal'
+import Form from '../../components/Form/Form'
 import './faq.scss'
 
 export default function FAQ(){

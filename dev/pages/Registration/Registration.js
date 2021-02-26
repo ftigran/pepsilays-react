@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 import Grid from '@material-ui/core/Grid';
-import TextFields, {TextFieldPhone} from '../../TextField/TextField'
+import TextFields, {TextFieldPhone} from '../../components/TextField/TextField'
 import './Registration.scss'
-import  {verify} from '../../Modal/SimpleModal/SimpleModal'
-import Checkbox from '../../Checkbox/Checkbox'
+import  {verify} from '../../components/Modal/SimpleModal/SimpleModal'
+import Checkbox from '../../components/Checkbox/Checkbox'
 
-export class Registration extends Component {
+export default class Registration extends Component {
     render(){
     return(
         <Grid container alignContent='center' justify='center' direction='column' className="RegistrationContainer">

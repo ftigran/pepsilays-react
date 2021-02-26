@@ -2,12 +2,12 @@ import React, { Component } from "react";
 
 import Grid from '@material-ui/core/Grid';
 
-import Rules from '../../Rules/Rules'
-import Top from '../../Top/Top'
-import Priz from '../../Priz/Priz'
-import Random from '../../Random/Random'
-import Winners from "../../Winners/Winners";
-import Footer from "../../Footer/Footer";
+import Rules from '../../components/Rules/Rules'
+import Top from '../../components/Top/Top'
+import Priz from '../../components/Priz/Priz'
+import Random from '../../components/Random/Random'
+import Winners from "../../components/Winners/Winners";
+import Footer from "../../components/Footer/Footer";
 
 import { Link, animateScroll as scroll } from "react-scroll";
 

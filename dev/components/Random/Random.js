@@ -7,9 +7,9 @@ function Priz(){
     return(
         <Container className={"random"}>
             <img src='../dev/img/bg2.svg'className={'randomBGtop'}/>
+            <img src='../dev/img/bg3.svg'className={'randomBGtop'}/>
             <Container className={'randomScreen'}>
                 <img src='../dev/img/video-1.png'className={'randomVideo'}/>
-
                 <h2 className={'randomText'}>загадывай фильм и жми пуск!</h2>
                 <Button className={'buttonVideo'}><img src='../dev/img/buttonPlay.png'/></Button>
 

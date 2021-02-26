@@ -16,9 +16,9 @@ import {
 } from "react-router-dom";
 function LoginModal(props){
     const users = [
-        createUsers('1@Q.ru', 555555, 'Юлия'),
-        createUsers('2@Q.ru', 123456, 'Юрий'),
-        createUsers('3@Q.ru', 111111, 'Алексей')
+        createUsers('1@Q.ru', 555555, 'Юлия', 4, 2),
+        createUsers('2@Q.ru', 123456, 'Юрий',1,9),
+        createUsers('3@Q.ru', 111111, 'Алексей',100,510)
       ]
     let SetEmail = setEmail.bind(this);
     let SetPass = setPass.bind(this);
@@ -36,14 +36,15 @@ function LoginModal(props){
           let name;
           users.map((user)=>{
               if (user.email==email&&user.pass==pass){
-                name = user.name;
+                name = user;
+                console.log(name)
               }
           })
         if(name){
             props.changeUser({
-              prizi: 4,
-              cheki: 2,
-              name: "Егор",
+              prizi: name.prizi,
+              cheki:name.cheki,
+              name: name.name,
             })
             //history.push('/cabinet');
         }else {
@@ -53,11 +54,13 @@ function LoginModal(props){
         }
       };
       
-    function createUsers(email, pass, name){
+    function createUsers(email, pass, name, cheki=0, prizi=0){
         return {
           email,
           pass,
-          name
+          name,
+          cheki,
+          prizi
         }
       }
         return (

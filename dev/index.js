@@ -4,9 +4,7 @@ import App from "./components/App.js";
 import Log from "./components/Modal/LoginModal/LoginModal";
 
 import list from "./components/Header/List/List";
-//import FAQ from "./components/pages/faq/faq.js";
 import './index.scss';
-import {Registration} from '../dev/components/pages/Registration/Registration'
 
 
 ReactDOM.render(
@@ -20,7 +18,7 @@ ReactDOM.render(
 
 
 
-import Main from './components/pages/main/main' //++
+//import Main from './components/pages/main/main' //++
 
 import Rules from './components/Rules/Rules'//++
 import Top from './components/Top/Top' //++

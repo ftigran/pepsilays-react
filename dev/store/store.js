@@ -3,11 +3,7 @@ import {rootRedducer} from './reducers'
 
 
 const initialState = {
-    user: {
-      prizi: 4,
-      cheki: 2,
-      name: "Егор",
-    },
+    user: '',
     error: false,
   }
 export const store = createStore(rootRedducer, initialState)
