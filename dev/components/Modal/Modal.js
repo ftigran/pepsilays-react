@@ -8,9 +8,8 @@ import Button from '@material-ui/core/Button';
 
 import './Modal.scss'
 
-export default function TransitionsModal(props) {
-  const [open, setOpen] = React.useState(props.isOpen);
-console.log(props.isOpen)
+export default function TransitionsModal({className='', isOpen=false, btnText='', title, btnClass='',childBtnText, children}) {
+  const [open, setOpen] = React.useState(isOpen);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -18,10 +17,9 @@ console.log(props.isOpen)
   const handleClose = () => {
     setOpen(false);
   };
-
   return (
     <div className='modalContainer'>
-      {getBtn(props.btnText, handleOpen)}
+      {getBtn(btnText, handleOpen)}
       
       <Modal
         aria-labelledby="transition-modal-title"
@@ -36,8 +34,8 @@ console.log(props.isOpen)
         }}
       >
         <Fade in={open}>
-          <div className={'modalWindow'+props.className}>
-            <h2 id="transition-modal-title">{props.title}</h2>
+          <div className={'modalWindow '+className}>
+            <h2 id="transition-modal-title">{title}</h2>
                 <IconButton
                 aria-label="Закрыть окно"
                 className={'modalWindowClose'}
@@ -45,8 +43,8 @@ console.log(props.isOpen)
                 >
                     <CloseIcon/>
                 </IconButton>
-            {props.children}
-            {getBtn(props.childBtnText, handleClose, props.btnClass)}
+            {children}
+            {getBtn(childBtnText, handleClose, btnClass)}
             
           </div>
         </Fade>

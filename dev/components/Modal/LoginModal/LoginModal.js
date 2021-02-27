@@ -7,6 +7,7 @@ import { changeUser, toggleError} from "../../../store/actions";
 import { connect } from "react-redux";
 import './LoginModal.scss'
 import {WrapedUserError} from '../UserLoginErrorModal/UserLoginErrorModal'
+import {sbros} from '../SimpleModal/SimpleModal'
 import { useHistory } from "react-router-dom";
 import {
   BrowserRouter as Router,
@@ -49,9 +50,7 @@ function LoginModal(props){
             })
             //history.push('/cabinet');
         }else {
-
             props.toggleError()
-            console.log(props)
         }
       };
       
@@ -76,7 +75,21 @@ function LoginModal(props){
                 <TextField handler={SetEmail} className='LoginModalEmail' type='email' placeholder='E-mail'></TextField>
     
                 <TextField handler={SetPass} className='LoginModalPassword' type='password' placeholder='Пароль'></TextField>
-                <a className='LoginModalReset' href='empty'>Забыл пароль?</a>
+                  <Modal 
+                    className={' LoginModalReset'} 
+                    title='Восстановление пароля' 
+                    btnText={'Забыл пароль?'}
+                    >
+                      <p>
+                      Укажи E-mail, с которым ты зарегистрирован 
+                      в Акции.
+                      </p>
+                      <p>
+                      Пароль к твоему Личному кабинету будет отправлен на указанный E-mail.
+                      </p>
+                      <TextField handler={SetEmail} className='LoginModalEmail' type='email' placeholder='E-mail'></TextField>
+                      {sbros}
+                    </Modal>
                 <Button 
                 className='LoginModalEnter'
                 onClick={()=>{
