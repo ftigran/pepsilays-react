@@ -19,9 +19,21 @@ color: #10417B;
     padding: 0 10px
 }
 
-
+button.cabinetBtn{
+    width: 92px;
+    height: 24px;
+    background: #004088;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+}
 
 .cabinet{
+    
     &Card{
         font-family: 'Gotham Pro';
         color: #FFDD00;
@@ -32,8 +44,10 @@ color: #10417B;
         grid-template-columns: 1fr 3px 1fr;
         grid-gap: 8px;
         padding: 35px;
+        padding-right: 8px;
         max-width: 794px;
         margin: 35px 0 100px;
+        width: 100%;
         a{
 font-style: normal;
 font-weight: normal;
@@ -72,11 +86,16 @@ color: #FFDD00;
         
     }
 
-    &RegCheki{
+    .cabinetRegCheki{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
+        .modalContainer{
+            width: 100%;
+            max-width: 316px;
+        }
         h2{
             font-family: 'Montserrat';
             font-weight: bold;
@@ -96,6 +115,8 @@ color: #FFDD00;
             text-align: center;
             margin: 15px 0 20px;
             max-height: 300px;
+            max-width: 320px;
+
         }
         
         button{
@@ -111,13 +132,13 @@ color: #FFDD00;
             &.borderedBtn{
                 border: 2px solid #FFDD00;
                 border-radius: 9px;
-
+                max-width: 316px;
                 
                 font-size: 12px;
                 line-height: 15px;
                 padding-top: 8px;
 
-
+                background-color: transparent;
                 color: #FFDD00;
             }
             &.filledBtn{
@@ -133,13 +154,18 @@ color: #FFDD00;
         }
     }
 }
-
+@media (max-width:815px){
+    .cabinetCard{
+            padding-left: 8px;
+    }
+}
 @media (max-width:645px){
 .cabinet{
     &Card{
         grid-template-rows: auto 3px auto;
         grid-template-columns: auto;
         grid-gap: 35px;
+        padding: 35px;
     }
     &MyStat p{
         margin-right: 0;

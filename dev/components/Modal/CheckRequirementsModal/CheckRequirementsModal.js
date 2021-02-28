@@ -6,13 +6,13 @@ import Modal from '../Modal'
 import './CheckRequirementsModal.scss'
 
 
-export default function (){
+export default function (props){
     return (
         <Modal
         btnText='посмотреть требования к чеку'
         title='требования к чеку'
-        isOpen={true}
         className='CheckRequirementsModal'
+        mainBtnClass={props.mainBtnClass}
         >
             <Grid container className='CheckRequirementsModalContainer'>
                 <Grid item>

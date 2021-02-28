@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Checkbox from '../../components/Checkbox/Checkbox';
 import Button from '@material-ui/core/Button';
+import CheckRequirementsModal from '../../components/modal/CheckRequirementsModal/CheckRequirementsModal'
 
 import {verify} from '../../components/Modal/SimpleModal/SimpleModal'
 import Form from '../../components/Form/Form'
@@ -37,9 +38,7 @@ render()    {
                     На фото должны быть чётко видны 
                     данные чека и QR-код.
                 </p>
-                <Button className='borderedBtn'>
-                    посмотреть требования к чеку
-                </Button>
+                <CheckRequirementsModal mainBtnClass='borderedBtn'/>
                 <Button className='filledBtn'>
                     Зарегистрировать чек
                 </Button>
@@ -138,6 +137,41 @@ function SimpleTabs() {
         label: 'Статус модерации',
       },
   ]
+  const ColumnsPrizi = [
+    
+      { 
+        id: 'fd',
+        label: 'ФД',
+     },
+     { 
+      id: 'name',
+      label: 'Наименование призы',
+      },
+      {
+        id: 'stat',
+        label: 'Статус приза',
+      },
+  ]
+  const rowsPrizi = [
+    createDataPrizi('1234567891234567', 'Главный приз'),
+    createDataPrizi('1234567891234567', 'Сертификат'),
+    createDataPrizi('1234567891234567', 'Стикер'),
+  ]
+  function createDataPrizi(fd, name){
+    let stat;
+    switch (name){
+      case 'Стикер':
+        stat=<Button className='cabinetBtn'>Выбрать</Button>;
+        break;
+      case 'Сертификат':
+        stat=<Button className='cabinetBtn'>Скачать</Button>;
+        break;
+      case 'Главный приз':
+        stat='Ожидает выдачи';
+        break;
+    }
+    return {fd,name, stat}
+}
   function createData(date, fd, stat=false){
       stat==true ? stat='Принят':stat='Отклонен'
       return {date,fd,stat}
@@ -147,7 +181,6 @@ function SimpleTabs() {
     createData('25.02.21', 12536748),
     createData('25.02.21', 23635782, true),
     createData('25.02.21', 15899346, true),
-
   ]
   return (
     <div className='tabpage'>
@@ -165,7 +198,11 @@ function SimpleTabs() {
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        PRIZI
+        <Table 
+          columns={ColumnsPrizi} 
+          rows={rowsPrizi}
+          rowsPerPage={5}
+          />
       </TabPanel>
     </div>
   );
