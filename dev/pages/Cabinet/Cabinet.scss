@@ -16,7 +16,9 @@ text-align: center;
 color: #10417B;
 }
 .cabinet{
-    padding: 0 10px
+    padding: 0 10px;
+    flex: 1 0 auto;
+
 }
 
 button.cabinetBtn{
@@ -229,8 +231,6 @@ button{
     }
 }
 
-#simple-tabpanel-0{
-}
 .tabpage{
     width: 100%;
     max-width: 794px;

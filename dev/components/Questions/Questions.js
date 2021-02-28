@@ -15,7 +15,6 @@ export default function Questions(arr){
         getAccordeon([{
             title: 'В какие сроки проходит Акция?',
             text: 'Период совершения покупки: с 00:00:00 10 февраля до 23:59:59 23 марта 2021; Период регистрации чеков: с 00:00:00 10 февраля до 23:59:59 23 марта 2021 (по московскому времени). Период выдачи призов Победителям Акции: с 19.02.21 по 10.04.21.',
-            expanded: true,
         },
         {
             title: 'Какие продукты участвуют в акции?',
@@ -66,11 +65,14 @@ export default function Questions(arr){
 function getAccordeon(arr){
     const rowsPerPage=7;
     const [page, setPage] = React.useState(1);
+    const [expanded, setExpanded] = React.useState(0);
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
-
+    const hangleExpand=(id) =>{
+        setExpanded(id)
+    }
 
 
     return(
@@ -82,7 +84,7 @@ function getAccordeon(arr){
             {
                 arr.slice((page-1) * rowsPerPage, (page-1) * rowsPerPage + rowsPerPage).map((row, id) => {
                 return(
-                    <Accordion defaultExpanded={row.expanded} className={'questionsAccordeon'}>
+                    <Accordion className={'questionsAccordeon'} expanded={expanded===id} onClick={()=>hangleExpand(id)}>
                         <AccordionSummary
                         className={'questionsAccordeonSummary'}
                         expandIcon={<ExpandMoreIcon />}

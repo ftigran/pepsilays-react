@@ -56,3 +56,17 @@ a{
         }
     }
 }
+@media(max-width: 540px){
+    footer.footer{
+
+        .footerMail a{
+            word-wrap: normal !important;
+            margin: auto;
+            width: 100%;
+        }
+    }
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}

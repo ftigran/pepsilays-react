@@ -19,11 +19,18 @@ header.header{
 .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5{
     display: none;
 }
-@media(max-width: 1160px){
+
+@media (max-width: 1850px) {
+    header.header{
+        max-width: 1180px;
+    }
+}
+@media(max-width: 1720px){
     .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5{
         display: block;
     }
     header.header{
+        max-width: 60%;
         img{
             margin-top: 12px;
             width: 84px;
@@ -41,4 +48,9 @@ header.header{
         }
     }
 }
+}
+@media(max-width: 1130px){
+    header.header{
+        max-width: 100%;
+    }
 }

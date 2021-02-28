@@ -14,6 +14,7 @@ export class SimpleModal extends React.Component{
         btnText={this.props.btnText}
         childBtnText={'OK'}
         isOpen={this.props.isOpen}
+        mainBtnClass='SimpleModalBtn'
         >
             <p className={'SimpleModalText'}>
                 {this.props.text}
