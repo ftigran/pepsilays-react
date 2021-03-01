@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Checkbox from '../../components/Checkbox/Checkbox';
 import Button from '@material-ui/core/Button';
-import CheckRequirementsModal from '../../components/modal/CheckRequirementsModal/CheckRequirementsModal'
+import CheckRequirementsModal from '../../components/Modal/CheckRequirementsModal/CheckRequirementsModal'
 
 import {verify} from '../../components/Modal/SimpleModal/SimpleModal'
 import Form from '../../components/Form/Form'
