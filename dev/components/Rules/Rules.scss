@@ -2,7 +2,9 @@
 
 .rules{
     &Block{
-        margin-top: 70px;   
+        h2{
+            padding-top: 20px;
+        }
     }
     
     &Container{
@@ -15,7 +17,6 @@
         min-height: 705px;
 
         margin: 60px auto 0;
-
         a{
             font-family: 'Roboto';
             font-style: normal;
