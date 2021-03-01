@@ -17,7 +17,7 @@ import {
 } from "react-router-dom";
 import List from './List/List';
 import SlideList from './SlideList';
-
+import logo from '../../img/logo.svg'
 import './Header.scss'
 function HideOnScroll(props) {
     const { children, window } = props;
@@ -44,17 +44,6 @@ function HideOnScroll(props) {
 
 
 export default function Header(props){
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
     return(
         <React.Fragment>
                     <CssBaseline />
@@ -62,7 +51,7 @@ export default function Header(props){
                         <AppBar className={'header'}>
                             <LinkR to='main' spy={true} smooth={true} duration={500}>
                               <Link to="/">
-                                <img src="./dev/img/logo.svg"/>
+                                <img src={logo}/>
                               </Link>
                             </LinkR>
                             <List/>

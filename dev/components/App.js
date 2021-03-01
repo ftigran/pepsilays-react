@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
-
-import Grid from '@material-ui/core/Grid';
-import autoprefixer from "autoprefixer";
 
 import Main from '../pages/main/main'
 import Header from './Header/Header'
