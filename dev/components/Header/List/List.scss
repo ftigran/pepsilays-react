@@ -1,3 +1,5 @@
+@import '../../../mixins.scss';
+
 .headerList{
     ul{
         display: flex;
@@ -10,17 +12,17 @@
         font-family: "Gotham Pro";
         font-style: normal;
         font-weight: bold;
-        font-size: 18px;
-        line-height: 17px;
+        @include adaptiv-font(18,17);
+        //font-size: 18px;
+        //line-height: 17px;
         height: 100%;
         text-transform: uppercase;
 
     }
     li{
         margin-left: 30px;
-        height: 32px;
-        &:hover{
-            text-shadow: violet;
+        & a:hover, button:hover{
+            opacity: 0.6;
         }
     }
     a{

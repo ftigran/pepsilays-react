@@ -80,6 +80,8 @@ function LoginModal(props){
                     className={' LoginModalReset'} 
                     title='Восстановление пароля' 
                     btnText={'Забыл пароль?'}
+                    mainBtnClass='sbrosButton'
+
                     >
                       <p>
                       Укажи E-mail, с которым ты зарегистрирован 
@@ -93,6 +95,7 @@ function LoginModal(props){
                     </Modal>
                 <Button 
                 className='LoginModalEnter'
+                fullWidth
                 onClick={()=>{
                     handleEnter();
                     }}>
@@ -100,6 +103,8 @@ function LoginModal(props){
                 </Button>
                 <Button 
                 className='LoginModalReg'
+                fullWidth
+                variant='outlined'
                 onClick={()=>{
                     handleEnter();
                     }}>

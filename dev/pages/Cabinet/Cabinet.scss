@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 h1{
     font-family: 'Montserrat';
 font-size: 30px;
@@ -61,14 +63,16 @@ color: #FFDD00;
     &MyStat{
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
-        line-height: 24px;
+        //font-size: 20px;
+        @include adaptiv-font(20, 24);
+        //line-height: 24px;
 
         text-transform: uppercase;
 
         p{
-            font-size: 20px;
-            line-height: 24px;
+            //font-size: 20px;
+            @include adaptiv-font(20, 24);
+            //line-height: 24px;
             display: flex;
             justify-content: space-between;
             margin: 0 77px 15px 0;
@@ -89,8 +93,9 @@ color: #FFDD00;
         h2{
             font-family: 'Montserrat';
             font-weight: bold;
-            font-size: 18px;
-            line-height: 22px;
+            //font-size: 18px;
+            @include adaptiv-font(18, 22);
+            //line-height: 22px;
 
             text-align: center;
             letter-spacing: 0.017em;
@@ -100,8 +105,9 @@ color: #FFDD00;
             margin: 0;
         }
         p{
-            font-size: 16px;
-            line-height: 20px;
+            @include adaptiv-font(16, 20);
+            //font-size: 16px;
+            //line-height: 20px;
             text-align: center;
             margin: 15px 0 20px;
             max-height: 300px;
@@ -161,8 +167,9 @@ button{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
-    font-size: 32px;
-    line-height: 39px;
+    //font-size: 32px;
+    @include adaptiv-font(32, 39);
+    //line-height: 39px;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #10417B;
@@ -175,19 +182,22 @@ button{
     header.TabBar{
         button{
             padding: 0 20px;
-            font-size: 28px;
+            @include adaptiv-font(28);
+            //font-size: 28px;
 
         }
     }
     .MuiBox-root.MuiBox-root-9{
         padding: 0;
         th.MuiTableCell-head{
-            font-size: 16px;
-    line-height: 29px;
+            //font-size: 16px;
+            @include adaptiv-font(16, 29);
+    //line-height: 29px;
         }
         tr td, th{
             padding: 5px;
-            font-size: 14px;
+            //font-size: 14px;
+            @include adaptiv-font(14);
         }
     }
 }
@@ -201,7 +211,8 @@ button{
     div .table .tableHeader th{
         font-style: normal;
         font-weight: 800;
-        font-size: 18px;
-        line-height: 22px;
+        @include adaptiv-font(18, 22);
+        //font-size: 18px;
+        //line-height: 22px;
     }
 }

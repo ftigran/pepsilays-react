@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .rules{
     &Block{
         margin-top: 70px;   
@@ -18,7 +20,8 @@
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
-            font-size: 16px;
+            @include adaptiv-font(16px);
+            //font-size: 16px;
             line-height: 1.5em;
             /* identical to box height, or 150% */
     

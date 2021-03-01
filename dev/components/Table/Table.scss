@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 div .table{
     margin: auto;
     box-shadow: none;
@@ -7,8 +9,9 @@ div .table{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 800;
-        font-size: 24px;
-        line-height: 29px;
+        //font-size: 24px;
+        @include adaptiv-font(24, 29);
+        //line-height: 29px;
         text-align: center;
         text-transform: uppercase;
 
@@ -31,8 +34,9 @@ div .table{
         font-family: 'Gotham Pro';
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
-        line-height: 17px;
+        //font-size: 18px;
+        @include adaptiv-font(18, 17);
+        //line-height: 17px;
         text-align: center;
         text-transform: uppercase;
 

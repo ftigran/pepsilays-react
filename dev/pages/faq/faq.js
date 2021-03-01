@@ -14,7 +14,7 @@ import './faq.scss'
 export default function FAQ(){
     
     return(
-        <Grid container direction={'row'} justify={'space-between'} className={'FAQ'} id='faq'>
+        <Grid container direction={'colunm'} justify={'space-between'} className={'FAQ'} id='faq'>
             <Questions/>
             {/* <Cleave 
             options={{

@@ -11,8 +11,10 @@
     font-family: 'Gotham Pro';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 17px;
+    @include adaptiv-font(18, 17);
+
+    //font-size: 18px;
+    //line-height: 17px;
     &.Mui-focused{
         color: #FFDD00;
         }
@@ -40,4 +42,16 @@
         border: none;
 
     }
+}
+
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $lineHeight:'') {
+ $mobSize: $pcSize*0.7;
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+ @if($lineHeight){
+    $line-height: #{$lineHeight/$pcSize+em};
+    line-height: $line-height;
+ }
 }

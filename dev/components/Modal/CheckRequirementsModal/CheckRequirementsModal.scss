@@ -1,3 +1,5 @@
+@import '../../../mixins.scss';
+
 .CheckRequirementsModal{
     max-width: 793px;
 }
@@ -12,8 +14,9 @@
         font-family: 'Gotham Pro';
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
-        line-height: 23px;
+        @include adaptiv-font(24, 23);
+        //font-size: 24px;
+        //line-height: 23px;
         color: #FFFFFF;
         margin-left: 10px;
         h4{
@@ -22,16 +25,18 @@
         }
         ul{
             list-style-image: url('../../../img/Ellipse.svg');
-            font-size: 18px;
-            line-height: 21px;
+            @include adaptiv-font(18, 21);
+            //font-size: 18px;
+            //line-height: 21px;
             padding-left: 16px;
             li{
                 margin-bottom: 9px;
             }
         }
         p{
-            font-size: 14px;
-            line-height: 18px;
+            @include adaptiv-font(14, 18);
+            //font-size: 14px;
+            //line-height: 18px;
             margin-top: 50px;
             margin-left: -16px;
         }

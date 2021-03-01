@@ -1,3 +1,4 @@
+@import '../../mixins.scss';
 
 .winners{
     padding: 0 8px;
@@ -22,8 +23,9 @@
             font-family: 'Gotham Pro';
             font-style: normal;
             font-weight: bold;
-            font-size: 18px;
-            line-height: 24px;
+            //font-size: 18px;
+            @include adaptiv-font(18, 24);
+            //line-height: 24px;
             color: #055BA4;
             text-transform: uppercase;
         }

@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 footer.footer{
     margin-top: 100px;
     background: #10417B;
@@ -14,8 +16,10 @@ a{
     font-family: 'Gotham Pro';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    @include adaptiv-font(18, 22);
+
+    //font-size: 18px;
+    //line-height: 22px;
 
     text-transform: uppercase;
 }

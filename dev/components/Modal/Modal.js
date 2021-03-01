@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 
 import './Modal.scss'
 
-export default function TransitionsModal({mainBtnVariant='text', mainBtnColor='default', className='', isOpen=false, btnText='', title, btnClass='',childBtnText, children, mainBtnClass=''}) {
+export default function TransitionsModal({btnFull=false,mainBtnFull=false, mainBtnVariant='text', mainBtnColor='default', className='', isOpen=false, btnText='', title, btnClass='',childBtnText, children, mainBtnClass=''}) {
   const [open, setOpen] = React.useState(isOpen);
   const handleOpen = () => {
     setOpen(true);
@@ -17,11 +17,9 @@ export default function TransitionsModal({mainBtnVariant='text', mainBtnColor='d
   const handleClose = () => {
     setOpen(false);
   };
-  console.log(className + ' '+mainBtnClass)
-
   return (
     <div className='modalContainer'>
-      {getBtn(btnText, handleOpen, mainBtnClass, mainBtnVariant, mainBtnColor)}
+      {getBtn(btnText, handleOpen, mainBtnClass, mainBtnVariant, mainBtnColor, mainBtnFull)}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -45,7 +43,7 @@ export default function TransitionsModal({mainBtnVariant='text', mainBtnColor='d
                     <CloseIcon/>
                 </IconButton>
             {children}
-            {getBtn(childBtnText, handleClose, btnClass)}
+            {getBtn(childBtnText, handleClose, btnClass,'','', btnFull)}
             
           </div>
         </Fade>
@@ -54,7 +52,7 @@ export default function TransitionsModal({mainBtnVariant='text', mainBtnColor='d
   );
 }
 
-function getBtn(name, handle, btnClass='', variant='', color=''){
+function getBtn(name, handle, btnClass='', variant='', color='', isFull=false){
   if (name){
     return <Button 
     className={'modalBtn '+btnClass} 
@@ -62,6 +60,7 @@ function getBtn(name, handle, btnClass='', variant='', color=''){
     onClick={handle}
     variant={variant}
     color={color}
+    fullWidth={isFull}
     >
       {name}
     </Button>

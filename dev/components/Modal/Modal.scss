@@ -1,3 +1,5 @@
+@import '../../mixins.scss';
+
 .modalContainer .modalBtn, .modalWindow .modalBtn{
     font-family: "Gotham Pro";
     font-style: normal;
@@ -10,8 +12,9 @@
     border-radius: 8px;
     color: #10417B;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 15px;
+    //font-size: 16px;
+    @include adaptiv-font(16, 15);
+    //line-height: 15px;
     box-sizing: border-box;
     .modalBtn{
         width: 200px;
@@ -52,8 +55,9 @@
         font-family: "Montserrat";
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
+        @include adaptiv-font(24, 29);
+        //font-size: 24px;
+        //line-height: 29px;
         text-align: center;
         text-transform: uppercase;
         margin: 0;
@@ -63,4 +67,8 @@
 .modal{
     display: flex;
     padding: 10px;
+}
+
+.modalWindow:focus{
+    outline: none;
 }

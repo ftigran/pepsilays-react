@@ -1,9 +1,14 @@
+@import '../../mixins.scss';
+
 .FAQ{
     margin: auto;
     padding: 127px 15px 0;
     max-width: 1230px;
+    .form{
+        min-width: 300px;
+    }
 }
-@media (max-width:1150px){
+@media (max-width:800px){
     .FAQ{
         flex-direction: column;
         align-items: center;
@@ -22,14 +27,14 @@
 }
 @media (max-width:400px){
     .FAQ {
-        padding: 0 10px;
         .MuiAccordionSummary-expandIcon {
             margin: 10px 10px 10px 0;
             height: 40px;
             width: 40px;
         }
         .questionsAccordeonTitle{
-            font-size: 22px;
+            //font-size: 22px;
+            //@include adaptiv-font(22);
     }
 }
 }
