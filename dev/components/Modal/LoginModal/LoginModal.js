@@ -69,6 +69,7 @@ function LoginModal(props){
             className={' LoginModal'} 
             title='Авторизация' 
             btnText={'Войти'}
+            mainBtnVariant='outlined'
             >
             <WrapedUserError/>
 

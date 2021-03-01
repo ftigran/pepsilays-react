@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 
 import './Modal.scss'
 
-export default function TransitionsModal({className='', isOpen=false, btnText='', title, btnClass='',childBtnText, children, mainBtnClass=''}) {
+export default function TransitionsModal({mainBtnVariant='text', mainBtnColor='default', className='', isOpen=false, btnText='', title, btnClass='',childBtnText, children, mainBtnClass=''}) {
   const [open, setOpen] = React.useState(isOpen);
   const handleOpen = () => {
     setOpen(true);
@@ -21,7 +21,7 @@ export default function TransitionsModal({className='', isOpen=false, btnText=''
 
   return (
     <div className='modalContainer'>
-      {getBtn(btnText, handleOpen, mainBtnClass)}
+      {getBtn(btnText, handleOpen, mainBtnClass, mainBtnVariant, mainBtnColor)}
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -54,12 +54,14 @@ export default function TransitionsModal({className='', isOpen=false, btnText=''
   );
 }
 
-function getBtn(name, handle, btnClass){
+function getBtn(name, handle, btnClass='', variant='', color=''){
   if (name){
     return <Button 
     className={'modalBtn '+btnClass} 
     color='secondaty'
     onClick={handle}
+    variant={variant}
+    color={color}
     >
       {name}
     </Button>

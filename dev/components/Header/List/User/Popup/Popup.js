@@ -38,7 +38,7 @@ class popup extends React.Component{
                         <span>Телефон</span>
                         <span>{this.props.user.phone}</span>
                     </div>
-                   <Button color='primary' onClick={()=>this.props.changeUser('')}>
+                   <Button fullWidth={true} onClick={()=>this.props.changeUser('')}>
                     Выход
                    </Button>
                 </div>

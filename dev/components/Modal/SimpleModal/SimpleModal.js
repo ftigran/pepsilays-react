@@ -26,7 +26,7 @@ export class SimpleModal extends React.Component{
 export const sbros= <SimpleModal
 title={'Восстановление пароля'}
 text={'Пароль к твоему Личному кабинету отправленна указанный e-mail'}
-btnText={'1'} 
+btnText={'ОК'} 
 />
 
 export const verify= <SimpleModal

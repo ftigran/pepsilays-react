@@ -13,6 +13,8 @@ export default function (props){
         title='требования к чеку'
         className='CheckRequirementsModal'
         mainBtnClass={props.mainBtnClass}
+        mainBtnVariant={props.mainBtnVariant}
+        mainBtnColor={props.mainBtnColor}
         >
             <Grid container className='CheckRequirementsModalContainer'>
                 <Grid item>

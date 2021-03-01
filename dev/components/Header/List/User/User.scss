@@ -5,8 +5,6 @@
         margin-left: 30px;
         padding: 0;
         height: 32px;
-        padding: 0 15px;
-        text-align: center;
         border-radius: 5px;
 
     }
@@ -14,16 +12,21 @@
         margin-left: 30px;
         cursor: pointer;
     }
+    button{
+        border-radius: 5px !important;
+    }
     button.modalBtn{
-        border: 2px solid #fff;
-        padding: 0 15px;
-        border-radius: 5px;
-        background-color: transparent;
-        color: #fff;
         height: 32px;
+        padding: 8px 15px 8px;
+        box-sizing: border-box;
     }
     .headerListReg{
         a{color: #10417B;}
+        font-family: 'Gotham Pro';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 17px;
     }
 
 }

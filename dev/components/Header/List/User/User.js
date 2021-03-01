@@ -43,7 +43,7 @@ class User extends React.Component{
             return(
                 <li className={'User UserGuest'}>
                       
-                    <Button color='primary' className={'headerListReg'}>
+                    <Button className={'headerListReg'}>
                         <Link to="/reg">
                             Регистрация
                         </Link>    

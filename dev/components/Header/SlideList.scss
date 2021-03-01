@@ -7,6 +7,14 @@ div.MuiDrawer-root.MuiDrawer-modal{
 button.headerMenu{
     display: none;
 }
+header.header button.headerMenu{
+    background: transparent;
+    padding: 0;
+    &:hover{
+        background: transparent;
+    }
+
+}
 
 .sliderList{
     background-color: #10417B;
@@ -14,7 +22,18 @@ button.headerMenu{
     .User{
         flex-direction: column;
         text-align: center;
+        width: 290px;
+        .modalContainer{
+            margin-top: 15px;
+        }
     } 
+    li.UserGuest{
+        height: auto;
+        button{
+            width: 100%;
+            margin: 0;
+        }
+    }
     a{
         width: 290px;
             margin: 0;

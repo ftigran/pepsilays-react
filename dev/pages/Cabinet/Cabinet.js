@@ -38,8 +38,8 @@ render()    {
                     На фото должны быть чётко видны 
                     данные чека и QR-код.
                 </p>
-                <CheckRequirementsModal mainBtnClass='borderedBtn'/>
-                <Button className='filledBtn'>
+                <CheckRequirementsModal mainBtnVariant='outlined' mainBtnColor='primary'/>
+                <Button color='primary'>
                     Зарегистрировать чек
                 </Button>
             </div>
@@ -161,10 +161,10 @@ function SimpleTabs() {
     let stat;
     switch (name){
       case 'Стикер':
-        stat=<Button className='cabinetBtn'>Выбрать</Button>;
+        stat=<Button size='small' color='primary'>Выбрать</Button>;
         break;
       case 'Сертификат':
-        stat=<Button className='cabinetBtn'>Скачать</Button>;
+        stat=<Button size='small' color='primary'>Скачать</Button>;
         break;
       case 'Главный приз':
         stat='Ожидает выдачи';
