@@ -5,6 +5,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+  import useReactRouter from 'use-react-router'
 
 import Main from '../pages/main/main'
 import Header from './Header/Header'
@@ -13,32 +14,37 @@ import Registration from '../pages/Registration/Registration'
 import Cabinet from '../pages/Cabinet/Cabinet'
 
 import './App.scss'
+import ScrollSection from './scroll-section/scroll-section'
 
 import FAQ from '../pages/faq/faq'
 
-class App extends Component {
-    render() {
+const App = () => {
+        const {location} = useReactRouter()
+        console.log(location);
+        console.log('location');
+
         return (
-            <Router>
+            <>
                 <Header/>
-                    <Switch>
-                        <Route key='faq' path={"/pages/Pepsilays/faq"}>
-                            <FAQ/>
+                    <Switch location={location}>
+                        <Route key='faq' location={location} path={"/faq"}
+                        render={() => 
+                            <FAQ/>} 
+                            exact
+                            />
+                        <Route path={"/reag"} render={() => <Registration/>}>
                         </Route>
-                        <Route path={"/pages/Pepsilays/reg"}>
-                            <Registration/>
+                        <Route path={"/cabinet"} render={() => <Cabinet/>}>
                         </Route>
-                        <Route path={"/pages/Pepsilays/cabinet"}>
-                            <Cabinet/>
-                        </Route>
-                        <Route key='index' location={location} path={"/"}>
-                            <Main/>
-                        </Route>
+                        <Route key='index' location={location} path={"/"} render={() => 
+                            <Main/>} exact/>
+                        <Route path="*"  component={<Cabinet/>} exact/>
+                        
                     </Switch>
                 <Footer/>
-            </Router>
+                <ScrollSection/>
+            </>
         );
     }
-}
 
 export default App;

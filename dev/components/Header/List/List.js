@@ -4,10 +4,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import {Link} from '@material-ui/core'
+
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import useReactRouter from 'use-react-router'
@@ -15,7 +16,7 @@ import './List.scss'
 import UserWithStore from './User/User'
 import NavLink from './NavLink/NavLink'
 
-export default function List() {
+const List=()=> {
     const {history} = useReactRouter()
 
     const handleClick = (key) => {
@@ -53,11 +54,11 @@ export default function List() {
                                 {/* <Link component={MyLink} className={'menu_item_in'} to={`/#${key}`}>{val}</Link>*/}
                             </li>
                         ))}
-                        {/* <Grid item xs={12} md={'auto'} className={'menu_item'} style={{textAlign: "center"}}>
-                            <Link component={NavLink} to="/faq" className={'menu_item_in'} onClick={scrollToTop}>
+                        <li >
+                            <Link component={NavLink} to="/faq" onClick={scrollToTop}>
                                 FAQ
                             </Link>
-                        </Grid> */}
+                        </li>
                 {/* {<li>
                     <LinkR to='main' spy={true} smooth={true} duration={500}>
                         <Link to={"/pages/Pepsilays/"}>Главная</Link>
@@ -87,16 +88,14 @@ export default function List() {
 
                 
                 <UserWithStore/>
-                {/* <li className={'headerListEnter'}>
-                    <LinkR to='enter' spy={true} smooth={true} duration={500}>
-                        <Link to="/enter">
-                            Войти
-                        </Link>
-                    </LinkR>     
-                </li>*/}
+                <li className={'headerListEnter'}>
+                {/* <Link component={NavLink} to="/enter" onClick={scrollToTop}>
+                    Войти
+                </Link> */}
+                </li>
             </ul>
         </Grid>
     )
 }
 
-
+export default List

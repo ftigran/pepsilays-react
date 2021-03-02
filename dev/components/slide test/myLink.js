@@ -7,11 +7,6 @@ export default forwardRef((props) => {
     <NavLink
       {...props}
       isActive={(match, location) => {
-        console.log(match)
-        console.log(location)
-        console.log(this)
-
-
         if (!match || !location || location.hash !== '') {
           return false
         }

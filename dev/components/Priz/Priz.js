@@ -8,9 +8,10 @@ import priz3 from '../../img/priz3.png'
 import priz31 from '../../img/priz3-1.png'
 
 
-function Priz(){
+const Priz = () => {
     return(
-        <Box className={'priz'} id={'priz'}>
+        <>
+        <Box className={'priz'} id={'c_prizes'}>
             <h2 className='title'>Призы</h2>
             <Grid container alignItems={'center'} justify={'center'} className={'prizContainer'} >
                     <Grid item xs={12} lg={3}>
@@ -25,6 +26,7 @@ function Priz(){
                     </Grid>
                 </Grid>
         </Box>
+        </>
     )
 }
 

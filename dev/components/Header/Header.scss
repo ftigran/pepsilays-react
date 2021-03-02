@@ -1,4 +1,5 @@
 header.header{
+    width: 100%;
     &.bg-black{
     background-color: #10417B;
     }
@@ -26,7 +27,7 @@ header.header{
 }
 
 @media (max-width: 1850px) {
-    header.header{
+    header.header div{
         max-width: 1180px;
     }
 }
@@ -34,8 +35,9 @@ header.header{
     .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5{
         display: block;
     }
-    header.header{
+    header.header div{
         max-width: 60%;
+        justify-content: space-between;
         img{
             margin-top: 12px;
             width: 84px;

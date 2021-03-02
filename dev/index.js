@@ -5,10 +5,13 @@ import Log from "./components/Modal/LoginModal/LoginModal";
 
 import list from "./components/Header/List/List";
 import './index.scss';
+import {BrowserRouter} from 'react-router-dom'
 
 
 ReactDOM.render(
-  <App/>
+  <BrowserRouter basename={'/'}>
+    <App/>
+  </BrowserRouter>
 
 , document.getElementById("root"));
 

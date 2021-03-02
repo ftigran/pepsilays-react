@@ -76,7 +76,7 @@ function getAccordeon(arr){
 
 
     return(
-        <Grid item xs={7} className='questions'>
+        <Grid item xs={12} md={7} className='questions'>
             <h1>
                 Часто задаваемые вопросы
             </h1>

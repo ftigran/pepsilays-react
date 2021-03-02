@@ -2,27 +2,19 @@ import React, { useState, useEffect } from "react";
 
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
+import {Link} from '@material-ui/core';
 import Slide from '@material-ui/core/Slide';
 import Grid from '@material-ui/core/Grid';
 
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import { Link as LinkR, animateScroll as scroll } from "react-scroll";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import List from './List/List';
 import SlideList from './SlideList';
 import logo from '../../img/logo.svg'
 import './Header.scss'
 import {route} from '../App'
+import NavLink from './List/NavLink/NavLink'
 
-export default function Header(props){
+const Header = () => {
   const trigger = useScrollTrigger({target: window})
   const [scroll, setScroll] = useState(false);
 
@@ -32,6 +24,7 @@ export default function Header(props){
     });
   }, []);
     return(
+      <>
       <Slide appear={false} direction="down" in={!trigger}>
           <AppBar className={scroll ? "header bg-black" : "header"}>
               <Grid className={'headerContainer'}
@@ -39,16 +32,16 @@ export default function Header(props){
               container
               direction='row'
               justify={'center'} alignItems={'center'}>
-                            <LinkR to='main' spy={true} smooth={true} duration={500}>
-                              <Link to={"/pages/Pepsilays/"}>
-                                <img src={logo}/>
-                              </Link>
-                            </LinkR>
+                <Link component={NavLink} className={'menu_item_in'} to="/">
+                  <img src={logo}/>
+                </Link>
                             <List/>
                             <SlideList/>
             </Grid>
-
-                        </AppBar>
+            </AppBar>
       </Slide>
+      </>
     )
 }
+
+export default Header

@@ -8,13 +8,15 @@ import Priz from '../../components/Priz/Priz'
 import Random from '../../components/Random/Random'
 import Winners from "../../components/Winners/Winners";
 import Footer from "../../components/Footer/Footer";
+import useReactRouter from 'use-react-router'
 
 import { Link, animateScroll as scroll } from "react-scroll";
 
+const Main = () => {
+    const {history} = useReactRouter()
 
-export default class Main extends Component {
-    render() {
         return (
+            <>
             <Grid container direction={'column'} justify={'flex-start'} alignItems={'stretch'} className={'wrap'}>
                     <Grid item xs={12}>
                         <Top/>
@@ -26,6 +28,7 @@ export default class Main extends Component {
                     <Winners/>
                 </Grid>
             </Grid>
+            </>
         );
-    }
 }
+export default Main

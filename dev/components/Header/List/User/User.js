@@ -5,32 +5,29 @@ import {bindActionCreators} from 'redux'
 import {store} from '../../../../store/store'
 import {changeUser, setPopup} from '../../../../store/actions'
 import Button from '@material-ui/core/Button';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+
 import './User.scss'
-import { Link as LinkR, animateScroll as scroll } from "react-scroll";
+import {Link} from '@material-ui/core'
 import Popup from './Popup/Popup'
+import NavLink from '../NavLink/NavLink'
 
 class User extends React.Component{
-    render(){
 
+    render(){
+        const scrollToTop = () => {
+            scroll.scrollToTop()
+        }
         const handleClick = (event) => {
             this.props.setPopup(event.currentTarget);
         };
         if(this.props.user){
             return (
                 <li className={'User'}>
-                    <LinkR to='cabinet' spy={true} smooth={true} duration={500}>
-                        <Link className="cabinetLink" to={"/pages/Pepsilays/cabinet"}>
-                            Личный кабинет
-                        </Link>
-                    </LinkR>
+                    <Link component={NavLink} className="cabinetLink" to="/enter" onClick={scrollToTop}>
+                    Личный кабинет
+                </Link>
                     <Popup/> 
-
                     <span 
                     className={'UserName'}
                         onClick={
@@ -45,7 +42,7 @@ class User extends React.Component{
                 <li className={'User UserGuest'}>
                       
                     <Button className={'headerListReg'}>
-                        <Link to={"/pages/Pepsilays/reg"}>
+                        <Link to={"/reg"} component={NavLink} onClick={scrollToTop}>
                             Регистрация
                         </Link>    
                     </Button>
