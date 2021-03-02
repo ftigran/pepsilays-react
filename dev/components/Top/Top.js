@@ -9,7 +9,7 @@ import promo2 from '../../img/promo2.png'
 
 function Rules(){
     return(
-        <Grid direction={"column"} container justify={'flex-start'} alignItems='center' className={'topGrid'} id={'main'}>
+        <Grid direction={"column"} container justify={'flex-start'} alignItems='center' className={'topGrid'} id={'c_main'}>
             <img className={'topPromo'} src={promo1}></img>
             <img className={'topPromoM'} src={promo2}></img>
 

@@ -46,7 +46,8 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "use-react-router": "^1.0.7"
   },
   "description": ""
 }

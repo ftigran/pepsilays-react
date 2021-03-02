@@ -14,6 +14,7 @@ import {
 import './User.scss'
 import { Link as LinkR, animateScroll as scroll } from "react-scroll";
 import Popup from './Popup/Popup'
+
 class User extends React.Component{
     render(){
 
@@ -24,7 +25,7 @@ class User extends React.Component{
             return (
                 <li className={'User'}>
                     <LinkR to='cabinet' spy={true} smooth={true} duration={500}>
-                        <Link className="cabinetLink" to="/cabinet">
+                        <Link className="cabinetLink" to={"/pages/Pepsilays/cabinet"}>
                             Личный кабинет
                         </Link>
                     </LinkR>
@@ -44,7 +45,7 @@ class User extends React.Component{
                 <li className={'User UserGuest'}>
                       
                     <Button className={'headerListReg'}>
-                        <Link to="/reg">
+                        <Link to={"/pages/Pepsilays/reg"}>
                             Регистрация
                         </Link>    
                     </Button>

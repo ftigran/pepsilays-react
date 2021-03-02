@@ -1,9 +1,14 @@
 header.header{
-    max-width: 1230px;
+    &.bg-black{
+    background-color: #10417B;
+    }
+    .headerContainer{
+        max-width: 1230px;
+        margin: auto;
+        flex-wrap: nowrap
+
+    }
     padding: 0 15px;
-    margin: auto;
-    flex-direction: row;
-    align-items: center;
     background-color: transparent;
     box-shadow: none;
     left: 0;

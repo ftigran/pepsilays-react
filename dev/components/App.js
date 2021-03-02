@@ -16,29 +16,22 @@ import './App.scss'
 
 import FAQ from '../pages/faq/faq'
 
-
-
-
-
 class App extends Component {
     render() {
         return (
             <Router>
                 <Header/>
                     <Switch>
-                        <Route exact path="/faq">
+                        <Route key='faq' path={"/pages/Pepsilays/faq"}>
                             <FAQ/>
                         </Route>
-                        <Route path="/reg">
+                        <Route path={"/pages/Pepsilays/reg"}>
                             <Registration/>
                         </Route>
-                        <Route path="/cabinet">
+                        <Route path={"/pages/Pepsilays/cabinet"}>
                             <Cabinet/>
                         </Route>
-                        <Route exact path="/">
-                            <Main/>
-                        </Route>
-                        <Route path="/#">
+                        <Route key='index' location={location} path={"/"}>
                             <Main/>
                         </Route>
                     </Switch>
