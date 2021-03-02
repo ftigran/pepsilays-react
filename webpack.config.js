@@ -27,6 +27,9 @@ const common = merge([{
             path: PATHS.build,
             filename: 'js/[name].js'
         },
+        devServer: {
+            historyApiFallback: true
+        },
         optimization: {
             minimizer: [
                 new OptimizeCssAssetsWebpackPlugin({})
