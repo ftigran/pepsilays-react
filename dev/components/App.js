@@ -32,13 +32,13 @@ const App = () => {
                             <FAQ/>} 
                             exact
                             />
-                        <Route path={"/reag"} render={() => <Registration/>}>
+                        <Route path={"/reg"} render={() => <Registration/>}>
                         </Route>
                         <Route path={"/cabinet"} render={() => <Cabinet/>}>
                         </Route>
                         <Route key='index' location={location} path={"/"} render={() => 
                             <Main/>} exact/>
-                        <Route path="*"  component={<Cabinet/>} exact/>
+                        <Route path="*" component={<Cabinet/>} />
                         
                     </Switch>
                 <Footer/>
