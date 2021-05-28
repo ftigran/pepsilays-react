@@ -1,0 +1,11 @@
+@import "../../mixins.scss";
+
+.Select {
+  @include fieldStyle();
+  .MuiInputBase-root {
+    color: #fff;
+  }
+  label.Mui-focused {
+    color: #fff;
+  }
+}

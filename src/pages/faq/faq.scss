@@ -1,0 +1,30 @@
+@import "../../mixins.scss";
+
+.FAQ {
+  margin: auto;
+  padding: 127px 15px 0;
+  max-width: 1230px;
+  .form {
+    max-width: 450px;
+  }
+}
+@media (max-width: 960px) {
+  .FAQ {
+    .form {
+      margin: 20px auto 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .FAQ {
+    .MuiAccordionSummary-expandIcon {
+      margin: 10px 10px 10px 0;
+      height: 40px;
+      width: 40px;
+    }
+    .questionsAccordeonTitle {
+      //font-size: 22px;
+      //@include adaptiv-font(22);
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../../../mixins.scss";
+
+.popup {
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  min-width: 290px;
+  position: relative;
+  &::before {
+    top: -10px;
+    right: 30px;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    transform: rotate(45deg);
+    //z-index: -1;
+    background-color: #10417b;
+  }
+  button {
+    height: 30px;
+    padding: 0 20px 3px !important;
+    font-size: 12px !important;
+    line-height: 11px !important;
+  }
+  &Data {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 86px auto;
+    grid-gap: 14px;
+    margin-bottom: 20px;
+    span {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: normal;
+      @include adaptiv-font(14, 17);
+      //font-size: 14px;
+      //line-height: 17px;
+      color: #ffffff;
+    }
+    span:nth-child(2n) {
+      font-family: "Gotham Pro";
+      //line-height: 13px;
+      //            line-height: 13px;
+    }
+  }
+}
+.popupContainer .MuiPopover-paper {
+  overflow: visible;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #10417b;
+}

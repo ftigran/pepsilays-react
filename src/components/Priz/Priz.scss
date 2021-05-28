@@ -1,0 +1,48 @@
+.priz {
+  &Img {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 285px;
+    &_mob {
+      display: none;
+    }
+  }
+  .prizContainer {
+    max-width: 1215px;
+    margin: auto;
+    div {
+      padding: 5px;
+      &:last-child {
+        .prizImg {
+          max-width: 590px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  div.prizContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 605px) {
+  .priz {
+    .prizContainer {
+      div:last-child {
+        align-self: stretch;
+        margin: 75px 0 0;
+        padding: 0;
+      }
+    }
+    .prizImg {
+      &_mob {
+        display: block;
+        width: 100%;
+      }
+      &_pc {
+        display: none;
+      }
+    }
+  }
+}

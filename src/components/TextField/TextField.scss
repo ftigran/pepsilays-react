@@ -1,0 +1,10 @@
+@import "../../mixins.scss";
+
+div.TextFields {
+  @include fieldStyle();
+}
+.TextFieldPhone {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}

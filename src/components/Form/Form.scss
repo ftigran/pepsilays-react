@@ -1,0 +1,36 @@
+@import "../../mixins.scss";
+
+.form {
+  background: #10417b;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 25px 25px 35px;
+  align-self: flex-start;
+  max-width: 388px;
+  .formTitle {
+    font-family: "Montserrat";
+    font-weight: bold;
+    @include adaptiv-font(24, 29);
+    //font-size: 24px;
+    //line-height: 29px;
+    color: #fff;
+  }
+  p {
+    margin: 15px 0 17.5px;
+    font-family: "Gotham Pro";
+    font-style: normal;
+    font-weight: normal;
+    @include adaptiv-font(18, 21);
+
+    //font-size: 18px;
+    //line-height: 21px;
+    color: #ffffff;
+  }
+  .TextFields {
+    margin: 7.5px 0;
+  }
+  label.checkboxContainer {
+    max-width: 300px;
+    margin: 35.5px 0 34px;
+  }
+}

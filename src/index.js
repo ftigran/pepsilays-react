@@ -1,0 +1,24 @@
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App.js";
+import Log from "./components/Modal/LoginModal/LoginModal";
+
+import list from "./components/Header/List/List";
+import "./index.scss";
+import { BrowserRouter } from "react-router-dom";
+
+ReactDOM.render(
+  <BrowserRouter basename={"/"}>
+    <App />
+  </BrowserRouter>,
+
+  document.getElementById("root")
+);
+
+//import Main from './components/pages/main/main' //++
+
+import Rules from "./components/Rules/Rules"; //++
+import Top from "./components/Top/Top"; //++
+import Priz from "./components/Priz/Priz"; //++
+import Random from "./components/Random/Random"; //++
+import Winners from "./components/Winners/Winners"; //++

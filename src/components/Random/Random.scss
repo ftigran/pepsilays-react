@@ -1,0 +1,118 @@
+@import "../../mixins.scss";
+
+.random {
+  &Video {
+    display: none;
+  }
+  button.buttonVideo {
+    position: relative;
+    border-radius: 50%;
+
+    :hover {
+      transform: scale(1.15);
+    }
+
+    img {
+      transition: all 0.2s ease-in;
+    }
+  }
+  //background:url('../../img/bg3.svg') no-repeat;
+  //background-size:cover;
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+  &BG {
+    width: 100%;
+    position: absolute;
+    top: -17%;
+    left: 0px;
+    z-index: -1;
+    &top {
+      top: 5%;
+      height: 95%;
+      object-fit: cover;
+    }
+  }
+  .randomScreen {
+    min-height: 800px;
+    max-width: 1100px;
+    background: url("../../img/video.png") no-repeat;
+    background-position: 35px;
+    background-size: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 135px;
+
+    button {
+      background: transparent;
+      padding: 0;
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+  &Text {
+    max-width: 450px;
+    color: white;
+    margin: 3px;
+  }
+}
+
+div.random {
+  max-width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .random button.buttonVideo img {
+    width: 100px;
+  }
+  .randomText {
+    max-width: 300px;
+    @include adaptiv-font(28);
+    //font-size: 28px;
+  }
+  .random .randomScreen {
+    min-height: 600px;
+  }
+}
+@media (max-width: 800px) {
+  .randomText {
+    max-width: 300px;
+    @include adaptiv-font(24);
+    //font-size: 24px;
+  }
+  .random .randomScreen {
+    min-height: 450px;
+  }
+}
+@media (max-width: 680px) {
+  .random {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    background: none;
+    &BGtop {
+      display: none;
+    }
+
+    .randomScreen {
+      background: #055ba4;
+      border: 5px solid #124d7e;
+      border-radius: 20px;
+      padding: 0px 10px 20px;
+    }
+    &Video {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .randomText {
+    max-width: 150px;
+    @include adaptiv-font(18, 22);
+    //font-size: 18px;
+    //line-height: 22px;
+  }
+}
