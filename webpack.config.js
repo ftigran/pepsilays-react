@@ -30,7 +30,7 @@ const common = merge([{
             filename: 'js/[name].js'
         },
         devServer: {
-            historyApiFallback: true
+            historyApiFallback: true,
         },
         optimization: {
             minimizer: [
@@ -69,11 +69,9 @@ const common = merge([{
 module.exports = function (env) {
     if (env === 'production') {
         return merge([
-            common,
-            prettier(),
-            clean()
-        ])
-
+        common,
+        prettier(),
+        clean()])
     }
     if (env === 'development') {
         return merge([
