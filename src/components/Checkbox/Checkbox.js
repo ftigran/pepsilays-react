@@ -12,7 +12,7 @@ export default function (props) {
           className="checkbox"
           name="checkedB"
           color="primary"
-          checkedIcon={<img src='./images/checkbox.svg' />}
+          checkedIcon={<img src="./images/checkbox.svg" />}
         />
       }
       className="checkboxContainer"

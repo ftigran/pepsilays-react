@@ -35,7 +35,7 @@ const Header = () => {
             alignItems={"center"}
           >
             <Link component={NavLink} className={"menu_item_in"} to="/">
-              <img src='./images/logo.svg' />
+              <img src="./images/logo.svg" />
             </Link>
             <List />
             <SlideList />

@@ -22,19 +22,19 @@ function Rules() {
         alignItems={"center"}
       >
         <Grid item className={"rulesList"}>
-          <img alt="1" className={"rulesNumb"} src='./images/numb1.svg' />
+          <img alt="1" className={"rulesNumb"} src="./images/numb1.svg" />
           <ListItemText
             primary="Купи"
             secondary="2 любых продукта Lay's (150, 225 г.) или Pepsi (1 или 2 л.)"
           />
 
-          <img alt="2" className={"rulesNumb"} src='./images/numb2.svg' />
+          <img alt="2" className={"rulesNumb"} src="./images/numb2.svg" />
           <ListItemText
             primary="Регистрируй чек на сайте"
             secondary="выбери жанр, участвуй в розыгрыше призов"
           />
 
-          <img alt="3" className={"rulesNumb"} src='./images/numb3.svg' />
+          <img alt="3" className={"rulesNumb"} src="./images/numb3.svg" />
           <ListItemText
             primary="выигрывай призы    "
             secondary="каждую неделю"

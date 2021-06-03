@@ -15,14 +15,14 @@ const Priz = () => {
           className={"prizContainer"}
         >
           <Grid item xs={12} lg={3}>
-            <img src='./images/priz1.png' className={"prizImg"} />
+            <img src="./images/priz1.png" className={"prizImg"} />
           </Grid>
           <Grid item xs={12} lg={3}>
-            <img src='./images/priz2.png' className={"prizImg"} />
+            <img src="./images/priz2.png" className={"prizImg"} />
           </Grid>
           <Grid item xs={12} lg={6}>
-            <img src='./images/priz3.png' className={"prizImg prizImg_pc"} />
-            <img src='./images/priz3-1.png' className={"prizImg prizImg_mob"} />
+            <img src="./images/priz3.png" className={"prizImg prizImg_pc"} />
+            <img src="./images/priz3-1.png" className={"prizImg prizImg_mob"} />
           </Grid>
         </Grid>
       </Box>

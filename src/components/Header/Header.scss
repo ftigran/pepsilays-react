@@ -20,7 +20,7 @@ header.header {
     height: 57.5px;
     border-radius: 2px;
   }
-  a{
+  a {
     cursor: pointer;
     transition: opacity 0.3s;
   }
@@ -35,7 +35,6 @@ header.header {
   }
 }
 @media (max-width: 1720px) {
-
   header.header div {
     max-width: 60%;
     justify-content: space-between;
@@ -44,8 +43,6 @@ header.header {
       width: 84px;
       height: 34px;
     }
-
-
   }
 }
 @media (max-width: 1130px) {

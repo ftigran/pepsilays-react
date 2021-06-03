@@ -1,7 +1,7 @@
 import React from "react";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
 import MenuIcon from "@material-ui/icons/Menu";
 import List from "./List/List";
@@ -25,17 +25,17 @@ export default function SwipeableTemporaryDrawer() {
     <div
       className={"sliderList"}
       role="presentation"
-      onClick={()=>toggleDrawer(false)}
-      onKeyDown={()=>toggleDrawer(false)}
+      onClick={() => toggleDrawer(false)}
+      onKeyDown={() => toggleDrawer(false)}
       style={{ height: "100%" }}
     >
       <Grid container justify={"space-between"} className={"sliderListHeader"}>
         <img src="./images/logo.svg" />
-        <IconButton onClick={()=>setState(false)} >
+        <IconButton onClick={() => setState(false)}>
           <CloseIcon className={"sliderListClose"} />
         </IconButton>
       </Grid>
-      <List handleClick={()=>setState(false)}/>
+      <List handleClick={() => setState(false)} />
     </div>
   );
 

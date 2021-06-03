@@ -17,7 +17,7 @@ export default function (props) {
     >
       <Grid container className="CheckRequirementsModalContainer">
         <Grid item>
-          <img src='./images/check.png' />
+          <img src="./images/check.png" />
         </Grid>
         <Grid item className="CheckRequirementsModalText">
           <h4>На чеке должно быть:</h4>
