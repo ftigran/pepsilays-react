@@ -38,7 +38,7 @@ const App = ({basename}) => {
           render={() => <Main />}
           exact
         />
-        <Route path="*" component={<Main />} />
+        <Route path="*" render={() =><Main />} />
       </Switch>
       <Footer />
       <ScrollSection />

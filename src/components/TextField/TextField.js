@@ -68,7 +68,7 @@ export default function TextFieldTemplate(props) {
       helperText={errors}
       onChange={handleChange}
       error={errors != ""}
-      disableUnderline
+      // disableUnderline
       className={"TextFields " + props.className}
     ></TextField>
   );
