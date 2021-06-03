@@ -70,7 +70,7 @@ div.random {
   }
   .randomText {
     max-width: 300px;
-    @include adaptiv-font(28, 36);
+    @include adaptiv-font(28);
     //font-size: 28px;
   }
   .random .randomScreen {
@@ -79,8 +79,8 @@ div.random {
 }
 @media (max-width: 800px) {
   .randomText {
-    max-width: 211px;
-    @include adaptiv-font(21, 32);
+    max-width: 300px;
+    @include adaptiv-font(24);
     //font-size: 24px;
   }
   .random .randomScreen {
