@@ -16139,7 +16139,6 @@ var App_App = function App() {
   var _useReactRouter = use_react_router_default()(),
       location = _useReactRouter.location;
 
-  var basename = "/pages/Pepsilays";
   return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(components_Header_Header, null), /*#__PURE__*/react_default.a.createElement(react["Suspense"], {
     fallback: /*#__PURE__*/react_default.a.createElement("div", {
       id: "pre-loader"
@@ -16149,19 +16148,19 @@ var App_App = function App() {
   }, /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
     key: "faq",
     location: location,
-    path: "".concat(basename, "/faq"),
+    path: "/faq",
     component: FAQ,
     exact: true
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: "".concat(basename, "/reg"),
+    path: "/reg",
     component: Registration
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: "".concat(basename, "/cabinet"),
+    path: "/cabinet",
     component: Cabinet
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
     key: "index",
     location: location,
-    path: "".concat(basename, "/"),
+    path: "/",
     component: Main,
     exact: true
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
@@ -16181,7 +16180,7 @@ var src = __webpack_require__(144);
 
 
 react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_router_dom_HashRouter, {
-  basename: "/pages/Pepsilays"
+  basename: "/"
 }, /*#__PURE__*/react_default.a.createElement(src_components_App, null)), document.getElementById("root"));
 
 /***/ }),
