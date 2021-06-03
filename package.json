@@ -2,6 +2,8 @@
   "name": "react-webpack",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://ftigran.github.io/pages/Pepsilays",
+
   "scripts": {
     "start": "webpack-dev-server --env development",
     "dev": "webpack --env development",
