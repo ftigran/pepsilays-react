@@ -10,17 +10,14 @@ const Cabinet = React.lazy(() => import("../pages/Cabinet/Cabinet"));
 const Registration = React.lazy(() =>
   import("../pages/Registration/Registration")
 );
-const FAQ =React.lazy(()=>import("../pages/faq/faq")) 
+const FAQ = React.lazy(() => import("../pages/faq/faq"));
 
 import "./App.scss";
 import ScrollSection from "./scroll-section/scroll-section";
 
-
-const App = ({ basename }) => {
+const App = () => {
   const { location } = useReactRouter();
-  console.log(location);
-  console.log("location");
-
+  const basename = process.env.basename
   return (
     <>
       <Header />
@@ -29,20 +26,20 @@ const App = ({ basename }) => {
           <Route
             key="faq"
             location={location}
-            path={"/faq"}
+            path={`${basename}/faq`}
             component={FAQ}
             exact
           />
-          <Route path={basename + "/reg"} component={Registration}></Route>
-          <Route path={basename + "/cabinet"} component={Cabinet}></Route>
+          <Route path={`${basename}/reg`} component={Registration}></Route>
+          <Route path={`${basename}/cabinet`} component={Cabinet}></Route>
           <Route
             key="index"
             location={location}
-            path={basename + "/"}
+            path={`${basename}/`}
             component={Main}
             exact
           />
-          <Route path="*" render={() => <Main />} />
+          <Route path="*" component={Main} />
         </Switch>
       </Suspense>
 

@@ -5,7 +5,18 @@
 html body {
   background-color: #ffdd00;
 }
-
+body {
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #004088;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    border-left: 1px solid #ffdd00;
+  }
+}
 .title {
   padding: 60px 0 25px;
 }

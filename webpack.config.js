@@ -5,6 +5,7 @@ const {
 } = require('webpack-merge')
 const pug = require('./webpack/pug')
 const scss = require('./webpack/scss')
+const enviroment = require('./webpack/env')
 const images = require('./webpack/images')
 const fonts = require('./webpack/fonts')
 const devServer = require('./webpack/devserver')
@@ -70,12 +71,14 @@ module.exports = function (env) {
     if (env === 'production') {
         return merge([
         common,
+        enviroment(false),
         prettier(),
         clean()])
     }
     if (env === 'development') {
         return merge([
             common,
+            enviroment(),
             devServer()
         ])
     }

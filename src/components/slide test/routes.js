@@ -11,7 +11,7 @@ const Routes = ({}) => {
     <>
       <Switch location={location}>
         <Route key="index" path="/" render={() => <P1 location={location} />} exact />
-        <Route key="faq" path="/faq" render={() => <P2 location={location} />} exact />
+        <Route key="faq" path={`${basename}/faq`} render={() => <P2 location={location} />} exact />
       </Switch>
     </>
   )

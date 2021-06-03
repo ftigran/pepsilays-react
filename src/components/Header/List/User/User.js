@@ -24,6 +24,7 @@ const User = ({ onClick }) => {
     dispatch(setPopup(event.currentTarget));
   };
   const name = useSelector((state) => state.user.name);
+  const basename = process.env.basename
 
   if (name) {
     return (
@@ -46,7 +47,7 @@ const User = ({ onClick }) => {
     return (
       <li className={"User UserGuest"}>
         <Button className={"headerListReg"}>
-          <Link to={"/reg"} component={NavLink} onClick={scrollToTop}>
+          <Link to={`${basename}/reg`} component={NavLink} onClick={scrollToTop}>
             Регистрация
           </Link>
         </Button>
