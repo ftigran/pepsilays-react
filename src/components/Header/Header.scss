@@ -20,6 +20,10 @@ header.header {
     height: 57.5px;
     border-radius: 2px;
   }
+  a{
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
 }
 .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5 {
   display: none;
@@ -31,9 +35,7 @@ header.header {
   }
 }
 @media (max-width: 1720px) {
-  .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5 {
-    display: block;
-  }
+
   header.header div {
     max-width: 60%;
     justify-content: space-between;
@@ -42,6 +44,16 @@ header.header {
       width: 84px;
       height: 34px;
     }
+
+
+  }
+}
+@media (max-width: 1130px) {
+  .PrivateSwipeArea-root-3.PrivateSwipeArea-anchorRight-5 {
+    display: block;
+  }
+  header.header {
+    max-width: 100%;
     nav {
       display: none;
     }
@@ -53,10 +65,5 @@ header.header {
         color: #fff;
       }
     }
-  }
-}
-@media (max-width: 1130px) {
-  header.header {
-    max-width: 100%;
   }
 }

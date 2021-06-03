@@ -7,9 +7,6 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Grid from "@material-ui/core/Grid";
 import { Box, Container } from "@material-ui/core";
 
-import numb1 from "../../img/numb1.svg";
-import numb2 from "../../img/numb2.svg";
-import numb3 from "../../img/numb3.svg";
 import "./Rules.scss";
 
 function Rules() {
@@ -25,19 +22,19 @@ function Rules() {
         alignItems={"center"}
       >
         <Grid item className={"rulesList"}>
-          <img alt="1" className={"rulesNumb"} src={numb1} />
+          <img alt="1" className={"rulesNumb"} src='./images/numb1.svg' />
           <ListItemText
             primary="Купи"
             secondary="2 любых продукта Lay's (150, 225 г.) или Pepsi (1 или 2 л.)"
           />
 
-          <img alt="2" className={"rulesNumb"} src={numb2} />
+          <img alt="2" className={"rulesNumb"} src='./images/numb2.svg' />
           <ListItemText
             primary="Регистрируй чек на сайте"
             secondary="выбери жанр, участвуй в розыгрыше призов"
           />
 
-          <img alt="3" className={"rulesNumb"} src={numb3} />
+          <img alt="3" className={"rulesNumb"} src='./images/numb3.svg' />
           <ListItemText
             primary="выигрывай призы    "
             secondary="каждую неделю"

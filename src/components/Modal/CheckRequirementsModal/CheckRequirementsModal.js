@@ -4,7 +4,6 @@ import Grid from "@material-ui/core/Grid";
 
 import Modal from "../Modal";
 import "./CheckRequirementsModal.scss";
-import check from "../../../img/check.png";
 
 export default function (props) {
   return (
@@ -18,7 +17,7 @@ export default function (props) {
     >
       <Grid container className="CheckRequirementsModalContainer">
         <Grid item>
-          <img src={check} />
+          <img src='./images/check.png' />
         </Grid>
         <Grid item className="CheckRequirementsModalText">
           <h4>На чеке должно быть:</h4>

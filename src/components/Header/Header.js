@@ -9,7 +9,6 @@ import Grid from "@material-ui/core/Grid";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import List from "./List/List";
 import SlideList from "./SlideList";
-import logo from "../../img/logo.svg";
 import "./Header.scss";
 import { route } from "../App";
 import NavLink from "./List/NavLink/NavLink";
@@ -36,7 +35,7 @@ const Header = () => {
             alignItems={"center"}
           >
             <Link component={NavLink} className={"menu_item_in"} to="/">
-              <img src={logo} />
+              <img src='./images/logo.svg' />
             </Link>
             <List />
             <SlideList />
