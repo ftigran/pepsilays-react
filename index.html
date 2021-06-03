@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width">
+    <title>React app</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="index.css" rel="stylesheet"></head>
+  <body> 
+    <div id="pre-loader">
+      <div class="water"></div>
+    </div>
+    <div id="root"></div>
+    <script>
+      window.onload = function() {
+      const pLoader = document.getElementById('pre-loader')
+      pLoader.classList.add('anim_fade_out')
+      setTimeout(function () {
+      pLoader.remove()
+      }, 500)
+      }
+    </script>
+  <script type="text/javascript" src="js/index.js"></script></body>
+</html>
