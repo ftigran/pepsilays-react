@@ -1,19 +1,22 @@
-import React, { Component } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import useReactRouter from "use-react-router";
 
-import Main from "../pages/main/main";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import Registration from "../pages/Registration/Registration";
-import Cabinet from "../pages/Cabinet/Cabinet";
+
+const Main = React.lazy(() => import("../pages/main/main"));
+const Cabinet = React.lazy(() => import("../pages/Cabinet/Cabinet"));
+const Registration = React.lazy(() =>
+  import("../pages/Registration/Registration")
+);
 
 import "./App.scss";
 import ScrollSection from "./scroll-section/scroll-section";
 
 import FAQ from "../pages/faq/faq";
 
-const App = ({basename}) => {
+const App = ({ basename }) => {
   const { location } = useReactRouter();
   console.log(location);
   console.log("location");
@@ -21,25 +24,28 @@ const App = ({basename}) => {
   return (
     <>
       <Header />
-      <Switch location={location}>
-        <Route
-          key="faq"
-          location={location}
-          path={"/faq"}
-          render={() => <FAQ />}
-          exact
-        />
-        <Route path={basename+"/reg"} render={() => <Registration />}></Route>
-        <Route path={basename+"/cabinet"} render={() => <Cabinet />}></Route>
-        <Route
-          key="index"
-          location={location}
-          path={basename+"/"}
-          render={() => <Main />}
-          exact
-        />
-        <Route path="*" render={() =><Main />} />
-      </Switch>
+      <Suspense fallback={<div id="pre-loader">Загрузка...</div>}>
+        <Switch location={location}>
+          <Route
+            key="faq"
+            location={location}
+            path={"/faq"}
+            component={FAQ}
+            exact
+          />
+          <Route path={basename + "/reg"} component={Registration}></Route>
+          <Route path={basename + "/cabinet"} component={Cabinet}></Route>
+          <Route
+            key="index"
+            location={location}
+            path={basename + "/"}
+            component={Main}
+            exact
+          />
+          <Route path="*" render={() => <Main />} />
+        </Switch>
+      </Suspense>
+
       <Footer />
       <ScrollSection />
     </>
