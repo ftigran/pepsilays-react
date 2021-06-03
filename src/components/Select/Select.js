@@ -20,7 +20,7 @@ export default function SimpleSelect() {
         id="demo-simple-select"
         value={age}
         onChange={handleChange}
-        icon
+        // icon
       >
         <MenuItem value={1}>Призы</MenuItem>
         <MenuItem value={2}>Чеки</MenuItem>

@@ -83,6 +83,7 @@ function getAccordeon(arr) {
               className={"questionsAccordeon"}
               expanded={expanded === id}
               onClick={() => hangleExpand(id)}
+              key={id}
             >
               <AccordionSummary
                 className={"questionsAccordeonSummary"}
