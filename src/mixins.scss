@@ -42,7 +42,7 @@
 }
 
 $maxWidth: 1920;
-@mixin adaptiv-font($pcSize, $lineHeight: $pcSize*1.25) {
+@mixin adaptiv-font($pcSize, $lineHeight: $pcSize * 1.25) {
   $mobSize: $pcSize * 0.7;
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - 320;

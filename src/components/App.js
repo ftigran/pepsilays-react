@@ -10,11 +10,11 @@ const Cabinet = React.lazy(() => import("../pages/Cabinet/Cabinet"));
 const Registration = React.lazy(() =>
   import("../pages/Registration/Registration")
 );
+const FAQ =React.lazy(()=>import("../pages/faq/faq")) 
 
 import "./App.scss";
 import ScrollSection from "./scroll-section/scroll-section";
 
-import FAQ from "../pages/faq/faq";
 
 const App = ({ basename }) => {
   const { location } = useReactRouter();

@@ -8,60 +8,54 @@ $path-length: 157px; // Retrieved using SVG's getTotalLength()
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffdd00;
   z-index: 10000;
-  svg {
-    overflow: visible;
-    width: 100px;
-    height: 150px;
 
-    g {
-      animation: slide $transition-duration linear infinite;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: calc( 25.2px + 10.8 * ((100vw - 320px) / 1600) );
+  line-height: 1.2222222222em;
+  text-transform: uppercase;
+  color: #10417b;
 
-      &:nth-child(2) {
-        animation-delay: $transition-duration / 4;
-
-        path {
-          animation-delay: $transition-duration / 4;
-          stroke-dasharray: 0px $path-length + 1;
-          stroke-dashoffset: 1px;
-        }
-      }
-    }
-
-    path {
-      stroke: url(#gradient);
-      stroke-width: 20px;
-      stroke-linecap: round;
-      fill: none;
-      stroke-dasharray: 0 $path-length;
-      stroke-dashoffset: 0;
-      animation: escalade $transition-duration cubic-bezier(0.8, 0, 0.2, 1)
-        infinite;
-    }
-  }
+  .water{
+    width:280px;
+    height: 280px;
+    background-color: #004088;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+    overflow: hidden;
+}
+.water:before, .water:after{
+    content:'';
+    position: absolute;
+    width:280px;
+    height: 280px;
+    top: -50px;
+    left: -30px;
+    background-color: #fff;
+}
+.water:before{
+    border-radius: 45%;
+    background:#fff;
+    animation:wave 5s linear infinite;
+}
+.water:after{
+    border-radius: 35%;
+    background:#ff171c;
+    top:-80px;
+    left:-70px;
+    animation:wave 5s linear infinite;
+}
 }
 
-@keyframes slide {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
-
-@keyframes escalade {
-  0% {
-    stroke-dasharray: 0 $path-length;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: $path-length - 1 $path-length;
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dasharray: $path-length - 1 $path-length;
-    stroke-dashoffset: -($path-length - 1);
-  }
+@keyframes wave{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

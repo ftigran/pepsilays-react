@@ -8,11 +8,11 @@ import "./index.scss";
 import { BrowserRouter } from "react-router-dom";
 
 // const basename="/pages/Pepsilays"
-const basename=""
+const basename = "";
 
 ReactDOM.render(
   <BrowserRouter basename={basename}>
-    <App basename={basename}/>
+    <App basename={basename} />
   </BrowserRouter>,
 
   document.getElementById("root")
