@@ -46,6 +46,13 @@
   }
   background: #10417b;
   padding: 55px 75px 50px;
+  @media(max-width: 600px){
+    padding: 45px 25px 35px;
+  }
+  @media(max-width: 400px){
+    padding: 35px 10px 25px;
+  }
+
   max-width: 600px;
   box-sizing: border-box;
   margin: auto;

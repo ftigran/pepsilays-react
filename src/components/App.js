@@ -13,7 +13,7 @@ import ScrollSection from "./scroll-section/scroll-section";
 
 import FAQ from "../pages/faq/faq";
 
-const App = () => {
+const App = ({basename}) => {
   const { location } = useReactRouter();
   console.log(location);
   console.log("location");
@@ -29,16 +29,16 @@ const App = () => {
           render={() => <FAQ />}
           exact
         />
-        <Route path={"/reg"} render={() => <Registration />}></Route>
-        <Route path={"/cabinet"} render={() => <Cabinet />}></Route>
+        <Route path={basename+"/reg"} render={() => <Registration />}></Route>
+        <Route path={basename+"/cabinet"} render={() => <Cabinet />}></Route>
         <Route
           key="index"
           location={location}
-          path={"/"}
+          path={basename+"/"}
           render={() => <Main />}
           exact
         />
-        <Route path="*" component={<Cabinet />} />
+        <Route path="*" component={<Main />} />
       </Switch>
       <Footer />
       <ScrollSection />

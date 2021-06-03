@@ -49,6 +49,9 @@ header.header button.headerMenu {
     height: 100%;
     li {
       margin: 10px;
+      a{
+        padding:10px;
+      }
       &:nth-child(3) {
         justify-self: flex-end;
       }
@@ -69,12 +72,11 @@ header.header button.headerMenu {
     height: calc(100% - 76px);
   }
   .sliderListHeader {
-    padding: 12px 15px 30px;
+    padding: 0 3px 18px;
     img {
       width: 84px;
       height: 34px;
-      left: 15px;
-      top: 12px;
+      padding: 12px;
       border-radius: 2px;
     }
     .sliderListClose {

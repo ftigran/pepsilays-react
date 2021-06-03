@@ -27,11 +27,11 @@
   }
   a {
     text-decoration: none;
-
+    cursor: pointer;
+    transition: all 0.4s;
     color: #ffffff;
     &.active a {
       border-bottom: 2px solid #fff;
-      transition: all 0.4s;
     }
   }
 

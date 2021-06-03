@@ -12,16 +12,21 @@ import "./List.scss";
 import UserWithStore from "./User/User";
 import NavLink from "./NavLink/NavLink";
 
-const List = () => {
+const List = (props) => {
   const { history } = useReactRouter();
-
+  
+  const atClick = props.handleClick || function(){};
   const handleClick = (key) => {
     if (window.location.pathname !== "") {
       history.push(`/#${key}`);
+      console.log("click")
+      atClick()
+      console.log("clicked")
+
     }
   };
-
-  const scrollToTop = () => {
+  const changePage = () => {
+    atClick()
     scroll.scrollToTop();
   };
 
@@ -56,7 +61,7 @@ const List = () => {
           </li>
         ))}
         <li>
-          <Link component={NavLink} to="/faq" onClick={scrollToTop}>
+          <Link component={NavLink} to="/faq" onClick={changePage}>
             FAQ
           </Link>
         </li>
@@ -87,7 +92,7 @@ const List = () => {
                 </li>} */}
         <div className="headerListGap"></div>
 
-        <UserWithStore />
+        <UserWithStore onClick={atClick}/>
         <li className={"headerListEnter"}>
           {/* <Link component={NavLink} to="/enter" onClick={scrollToTop}>
                     Войти

@@ -52,7 +52,7 @@ const User = ({onClick}) => {
               Регистрация
             </Link>
           </Button>
-          <LoginModal />
+          <LoginModal onClick={onClick}/>
         </li>
       );
     }
