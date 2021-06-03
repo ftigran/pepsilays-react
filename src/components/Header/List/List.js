@@ -35,7 +35,6 @@ const List = (props) => {
     c_prizes: "Призы",
     c_winners: "Победители",
   };
-  const basename = process.env.basename
   return (
     <Grid
       container
@@ -61,7 +60,7 @@ const List = (props) => {
           </li>
         ))}
         <li>
-          <Link component={NavLink} to={`${basename}/faq`} onClick={changePage}>
+          <Link component={NavLink} to="/faq" onClick={changePage}>
             FAQ
           </Link>
         </li>

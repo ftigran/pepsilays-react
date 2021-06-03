@@ -65,7 +65,7 @@ const Menu = () => {
                             </Grid>
                         ))}
                         <Grid item xs={12} md={'auto'} className={'menu_item'} style={{textAlign: "center"}}>
-                            <Link component={MyLink} to={`${basename}/faq`} className={'menu_item_in'} onClick={scrollToTop}
+                            <Link component={MyLink} to={`/faq`} className={'menu_item_in'} onClick={scrollToTop}
                                   style={{textAlign: "center"}}>
                                 FAQ
                             </Link>

@@ -31,8 +31,8 @@ function LoginModal(props) {
   function handleEnter() {
     let name;
     users.map((user) => {
-      if(true){
-      // if (user.email == email && user.pass == pass) {
+      if (true) {
+        // if (user.email == email && user.pass == pass) {
         name = user;
         console.log(name);
       }
@@ -43,7 +43,7 @@ function LoginModal(props) {
         cheki: name.cheki,
         name: name.name,
         phone: name.phone,
-        email
+        email,
       });
       //history.push('/cabinet');
     } else {

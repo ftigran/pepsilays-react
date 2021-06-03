@@ -17,7 +17,6 @@ import ScrollSection from "./scroll-section/scroll-section";
 
 const App = () => {
   const { location } = useReactRouter();
-  const basename = process.env.basename
   return (
     <>
       <Header />
@@ -26,16 +25,16 @@ const App = () => {
           <Route
             key="faq"
             location={location}
-            path={`${basename}/faq`}
+            path={`/faq`}
             component={FAQ}
             exact
           />
-          <Route path={`${basename}/reg`} component={Registration}></Route>
-          <Route path={`${basename}/cabinet`} component={Cabinet}></Route>
+          <Route path={`/reg`} component={Registration}></Route>
+          <Route path={`/cabinet`} component={Cabinet}></Route>
           <Route
             key="index"
             location={location}
-            path={`${basename}/`}
+            path={`/`}
             component={Main}
             exact
           />
