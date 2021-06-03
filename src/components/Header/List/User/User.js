@@ -11,16 +11,23 @@ import "./User.scss";
 import { Link } from "@material-ui/core";
 import Popup from "./Popup/Popup";
 import NavLink from "../NavLink/NavLink";
+import { useSelector, useDispatch } from 'react-redux'
 
-class User extends React.Component {
-  render() {
+
+
+const User = ({onClick}) => {
     const scrollToTop = () => {
+      onClick()
       scroll.scrollToTop();
     };
+    const dispatch = useDispatch()
     const handleClick = (event) => {
-      this.props.setPopup(event.currentTarget);
+      onClick()
+      dispatch(setPopup(event.currentTarget))
     };
-    if (this.props.user) {
+    const name = useSelector(state=>state.user.name)
+
+    if (name) {
       return (
         <li className={"User"}>
           <Link
@@ -33,7 +40,7 @@ class User extends React.Component {
           </Link>
           <Popup />
           <span className={"UserName"} onClick={handleClick}>
-            {this.props.user.name}
+            {name}
           </span>
         </li>
       );
@@ -49,30 +56,10 @@ class User extends React.Component {
         </li>
       );
     }
-  }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    user: state.user,
-    popupOpen: state.popupOpen,
-  };
-};
-const putActionsToProps = (dispatch) => {
-  return {
-    changeUser: bindActionCreators(changeUser, dispatch),
-    setPopup: bindActionCreators(setPopup, dispatch),
-  };
-};
-
-const WrapedUser = connect(mapStateToProps, putActionsToProps)(User);
-
-export default class UserWithStore extends React.Component {
-  render() {
-    return (
+export default ({onClick})=>(
       <Provider store={store}>
-        <WrapedUser />
+        <User onClick={onClick}/>
       </Provider>
     );
-  }
-}
