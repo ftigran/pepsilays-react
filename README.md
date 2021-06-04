@@ -1,9 +1,13 @@
 # pepsilays-react
 Первое задание в рамках стажировки.
 # Развёртывание
-`npm i`
+
+`npm i` установка зависимостей
+
 `npm run start` - запуск dev server
+
 `npm run dev` - сборка в режиме разработки
+
 `npm run build` - сборка в режиме продакшн
 
 ## Website pages
