@@ -24,10 +24,8 @@ const Main = () => {
         alignItems={"stretch"}
         className={"wrap"}
       >
-        <Grid item xs={12}>
-          <Top />
-        </Grid>
         <Grid item xs={12} className={"blockContainer"}>
+          <Top />
           <Rules />
           <Priz />
           <Random />
