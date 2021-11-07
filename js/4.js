@@ -700,12 +700,9 @@ var main_Main = function Main() {
     className: "wrap"
   }, /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
     item: true,
-    xs: 12
-  }, /*#__PURE__*/react_default.a.createElement(Top_Top, null)), /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
-    item: true,
     xs: 12,
     className: "blockContainer"
-  }, /*#__PURE__*/react_default.a.createElement(components_Rules_Rules, null), /*#__PURE__*/react_default.a.createElement(components_Priz_Priz, null), /*#__PURE__*/react_default.a.createElement(Random_Random, null), /*#__PURE__*/react_default.a.createElement(components_Winners_Winners, null))));
+  }, /*#__PURE__*/react_default.a.createElement(Top_Top, null), /*#__PURE__*/react_default.a.createElement(components_Rules_Rules, null), /*#__PURE__*/react_default.a.createElement(components_Priz_Priz, null), /*#__PURE__*/react_default.a.createElement(Random_Random, null), /*#__PURE__*/react_default.a.createElement(components_Winners_Winners, null))));
 };
 
 /* harmony default export */ var main = __webpack_exports__["default"] = (main_Main);
